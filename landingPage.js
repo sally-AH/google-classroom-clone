@@ -131,4 +131,17 @@ classes.forEach((studentClass, index) => {
       </div>
     `
   })
+  bodyContent.push(`
+    <div class="class-card active-class">
+    <div class="header" style="background-color:${color}; background-image: url(${image});">
+
+        <h3 class="class-name">${name}</h3>
+        <h3 class="class-name desc">${description}</h3>
+      </div>
+      ${assignmentDetails}`
+  )
 })
+
+console.log(bodyContent)
+const body = document.querySelector(".classes")
+body.innerHTML = bodyContent.join('')
