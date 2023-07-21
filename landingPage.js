@@ -6,7 +6,7 @@ classes = [
      id:1,
      name:"FSW23&24 | Tech",
      instructor:'Christopher Yammine',
-     image:'./home.png',
+     image:'./images/home.png',
 
      description:"full stack web dev bootcamp tech department",
      color:"black",
@@ -22,7 +22,7 @@ classes = [
      color:"green",
      name:"FSW23&24 | Soft Skills",
      instructor:'George Abed el Nour',
-     image:'./3177440.png',
+     image:'./images/3177440.png',
      description:"full stack web dev bootcamp soft skills department",
      assignments:[
        {
@@ -36,7 +36,7 @@ classes = [
      color:"green",
      name:"FSW23&24 | Soft Skills",
      instructor:'George Abed el Nour',
-     image:'./3177440.png',
+     image:'./images/3177440.png',
      description:"full stack web dev bootcamp soft skills department",
      assignments:[
        {
@@ -50,7 +50,7 @@ classes = [
      color:"green",
      name:"FSW23&24 | Soft Skills",
      instructor:'George Abed el Nour',
-     image:'./3177440.png',
+     image:'./images/3177440.png',
      description:"full stack web dev bootcamp soft skills department",
      assignments:[
        {
@@ -64,7 +64,7 @@ classes = [
      color:"green",
      name:"FSW23&24 | Soft Skills",
      instructor:'George Abed el Nour',
-     image:'./3177440.png',
+     image:'./images/3177440.png',
      description:"full stack web dev bootcamp soft skills department",
      assignments:[
        {
@@ -78,7 +78,7 @@ classes = [
      color:"green",
      name:"FSW23&24 | Soft Skills",
      instructor:'George Abed el Nour',
-     image:'./3177440.png',
+     image:'./images/3177440.png',
      description:"full stack web dev bootcamp soft skills department",
      assignments:[
        {
@@ -92,7 +92,7 @@ classes = [
      color:"green",
      name:"FSW23&24 | Soft Skills",
      instructor:'George Abed el Nour',
-     image:'./3177440.png',
+     image:'./images/3177440.png',
      description:"full stack web dev bootcamp soft skills department",
      assignments:[
        {
@@ -106,7 +106,7 @@ classes = [
      color:"green",
      name:"FSW23&24 | Soft Skills",
      instructor:'George Abed el Nour',
-     image:'./3177440.png',
+     image:'./images/3177440.png',
      description:"full stack web dev bootcamp soft skills department",
      assignments:[
        {
@@ -132,13 +132,21 @@ classes.forEach((studentClass, index) => {
     `
   })
   bodyContent.push(`
-    <div class="class-card active-class">
+    <div class="classCard">
     <div class="header" style="background-color:${color}; background-image: url(${image});">
 
-        <h3 class="class-name">${name}</h3>
-        <h3 class="class-name desc">${description}</h3>
+        <h3 class="className">${name}</h3>
+        <h3 class="className desc">${description}</h3>
       </div>
-      ${assignmentDetails}`
+      ${assignmentDetails}
+      <button class="dots">
+        <span>
+          <svg class="iconSvg" focusable="false" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path>
+          </svg>
+        </span>
+      </button>
+      </div>`
   )
 })
 
