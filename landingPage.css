@@ -1,0 +1,23 @@
+.navbar {
+  background: white;
+  border-bottom: 0.0625rem solid #e0e0e0;
+  flex-shrink: 0;
+  line-height: 1.7em;
+  position: fixed;
+  top: 0;
+  transform: none;
+  transition: transform cubic-bezier(0.4,0,0.2,1) 240ms;
+  width: 100%;
+  z-index: 986;
+}
+
+.navContent {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.navLeft{
+  flex: 1 1 0.0625rem;
+  min-width: 0;
+}
