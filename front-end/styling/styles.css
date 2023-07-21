@@ -109,3 +109,24 @@ html, body{
     border: none;
     border-radius: 4px;
 }
+
+.footer_section{
+    width: 100%;
+    display: flex;
+}
+
+.spinner{
+    width: 100%;
+}
+
+.links{
+    width: 100%;
+    display: flex;
+    column-gap: 1rem;
+    justify-content: flex-end;
+}
+
+.links a{
+    text-decoration: none;
+    color: #202124;
+}
