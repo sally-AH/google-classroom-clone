@@ -21,3 +21,11 @@
   flex: 1 1 0.0625rem;
   min-width: 0;
 }
+
+.navLogo{
+  height: 4rem;
+  padding-left: 3rem;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
