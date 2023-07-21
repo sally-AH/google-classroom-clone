@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+}
+
+.form_container {
+    width: 460px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.section {
+    width: 100%;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 40px;
+    border: 1px solid #DADCE0;
+    border-radius: 12px;
+}
+
+.section_header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.section_header h1 {
+    font-size: 24px;
+    font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
+    font-weight: 400;
+}
+
+.section_header p {
+    font-size: 16px;
+    font-family: "roboto", "Noto Sans Myanmar UI", arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.1;
+    color: #202124;
+}
+
+.section_header img {
+    width: 100px;
+    height: 30px;
+}
+
+.body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.input_body {
+    width: 375px;
+    height: 46px;
+    border: 1px solid #DADCE0;
+    border-radius: 4px;
+    padding: 0 20px;
+}
+
+.input {
+    width: 180px;
+    height: 46px;
+    border: 1px solid #DADCE0;
+    border-radius: 4px;
+    padding: 0 0 0 20px;
+}
+
+.row {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.row p {
+    color: #202124;
+    font-size: 14px;
+}
+
+.btn_container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cot {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cot a {
+    color: #1A73E8;
+    text-decoration: none;
+    width: fit-content;
+    padding: 10px 20px;
+    line-height: 1.5;
+    border-radius: 4px;
+    font-weight: 500;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+}
+
+.cot a:hover {
+    background-color: #e0edfc;
+}
+
+.btn_container button {
+    width: 79px;
+    height: 38px;
+    color: white;
+    background-color: #1A73E8;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer_section {
+    width: 100%;
+    display: flex;
+}
+
+.spinner {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "roboto", "Noto Sans Myanmar UI", arial, sans-serif;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    column-gap: 1rem;
+    justify-content: flex-end;
+}
+
+.links a {
+    text-decoration: none;
+    color: #202124;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "roboto", "Noto Sans Myanmar UI", arial, sans-serif;
+}
