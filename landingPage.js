@@ -117,3 +117,18 @@ classes = [
    },
  
 ]
+
+const bodyContent = []
+classes.forEach((studentClass, index) => {
+  const { id,name,color,image, instructor, description, assignments } = studentClass
+
+ 
+  let assignmentDetails = ''
+  assignments.forEach((assignment) => {
+    assignmentDetails += `<div class="assignments">
+      <p class="class-subject">Due tomorow</p>
+      <p class="assignment-name">${assignment.dueDate.split("T")[1]} - ${assignment.name}</p>
+      </div>
+    `
+  })
+})
