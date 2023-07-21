@@ -153,6 +153,7 @@ classes.forEach((studentClass, index) => {
   })
   bodyContent.push(`
     <div class="classCard">
+    <div class="top">
     <div class="header" style="background-color:${color}; background-image: url(${image});">
 
         <h3 class="className">${name}</h3>
@@ -166,6 +167,9 @@ classes.forEach((studentClass, index) => {
           </svg>
         </span>
       </button>
+      </div>
+      <div class="bottom">
+      
       <footer class = "footer">
         <div class="bottomIcons ">
         <span>
@@ -185,6 +189,7 @@ classes.forEach((studentClass, index) => {
         <a href="https://drive.google.com/drive/folders/1LLEQWXMr_zQtT_WalAcIyXtT9io0RzgEd6HzqomGoiGWlQ59djg7WHEu6qz4fmmMlC15ccKU?authuser=0" target="_blank" aria-label="Open folder for &quot;FSW 23&amp; 24 | Tech Full Stack Web Development Bootcamp&quot; in Google Drive"></a>
       </div>
     </footer>
+    </div>
       </div>`
   )
 })
