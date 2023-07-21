@@ -31,7 +31,7 @@ body {
 
 .section {
     width: 100%;
-    min-height: 500px;
+    min-height: 550px;
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
