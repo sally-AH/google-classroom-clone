@@ -103,3 +103,145 @@
   flex: 2 1 0.0625rem;
   min-width: 0;
 }
+
+.todoCalendar{
+    display: flex;
+    margin-top: 80px;
+}
+.container{
+  display: flex;
+  margin-left: 60px;
+}
+.todoText{
+  margin-top: 4px;
+  color: blue;
+  font-size: 15px;
+}
+.todoText.cal{
+  color: blue;
+  font-size: 15px;
+  
+}
+
+.todo{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  fill: currentColor;
+  color: blue;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left:25px;
+}
+
+.classCard {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  margin-bottom: 10px;
+  width: 400px;
+border-radius: 10px;
+}
+
+.header{
+  
+  background-color: magenta;
+  padding: 20px;
+  margin: 0;
+  height: 100px;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+  background-size: cover; /* Adjust the image size to cover the element */
+  background-position: center center;
+
+}
+
+.eleven{
+  color: red;
+}
+
+.dots {
+  position: relative;
+  left: 350px;
+  bottom: 205px;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+
+.iconSvg {
+  fill: white;
+
+}
+
+
+
+.className {
+
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 1.375rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    color: #fff;
+
+}
+.className.desc {
+
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1rem;
+    color: #fff;
+    width: 80%;
+    min-width: 250px;
+    
+
+}
+
+.classes{
+  margin: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-height: 350px;
+  margin-top: 20px;
+  margin-left: 80px;
+  
+ 
+}
+
+.bottomIcons{
+   margin-top: 20px;
+   margin-right: 25px;
+}
+.footer{
+  border:1px solid rgba(0,0,0,.1) ;
+  display: flex;
+  gap:20px;
+  justify-content: flex-end;
+  margin-top: 32px;
+  height: 70px;
+  
+}
+.assignmentName{
+  margin: 0;
+}
+
+
+.assignments{
+  display: flex;
+  flex-direction: column;
+  gap:0;
+  margin-left: 18px;
+  color: #999;
+  font-size: 1rem;
+
+}
+
+.classSubject{
+  font-size: 14px;
+  color: #777;
+  padding: 0;
+  margin-bottom: 3px;
+}

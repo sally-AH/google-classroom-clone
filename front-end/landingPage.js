@@ -6,7 +6,7 @@ classes = [
      id:1,
      name:"FSW23&24 | Tech",
      instructor:'Christopher Yammine',
-     image:'./images/home.png',
+     image:'../images/home.png',
 
      description:"full stack web dev bootcamp tech department",
      color:"black",
@@ -22,7 +22,7 @@ classes = [
      color:"green",
      name:"FSW23&24 | Soft Skills",
      instructor:'George Abed el Nour',
-     image:'./images/3177440.png',
+     image:'../images/3177440.png',
      description:"full stack web dev bootcamp soft skills department",
      assignments:[
        {
@@ -36,7 +36,7 @@ classes = [
      color:"green",
      name:"FSW23&24 | Soft Skills",
      instructor:'George Abed el Nour',
-     image:'./images/3177440.png',
+     image:'../images/3177440.png',
      description:"full stack web dev bootcamp soft skills department",
      assignments:[
        {
@@ -50,7 +50,7 @@ classes = [
      color:"green",
      name:"FSW23&24 | Soft Skills",
      instructor:'George Abed el Nour',
-     image:'./images/3177440.png',
+     image:'../images/3177440.png',
      description:"full stack web dev bootcamp soft skills department",
      assignments:[
        {
@@ -64,7 +64,7 @@ classes = [
      color:"green",
      name:"FSW23&24 | Soft Skills",
      instructor:'George Abed el Nour',
-     image:'./images/3177440.png',
+     image:'../images/3177440.png',
      description:"full stack web dev bootcamp soft skills department",
      assignments:[
        {
@@ -78,7 +78,7 @@ classes = [
      color:"green",
      name:"FSW23&24 | Soft Skills",
      instructor:'George Abed el Nour',
-     image:'./images/3177440.png',
+     image:'../images/3177440.png',
      description:"full stack web dev bootcamp soft skills department",
      assignments:[
        {
@@ -92,13 +92,33 @@ classes = [
      color:"green",
      name:"FSW23&24 | Soft Skills",
      instructor:'George Abed el Nour',
-     image:'./images/3177440.png',
+     image:'../images/3177440.png',
      description:"full stack web dev bootcamp soft skills department",
      assignments:[
        {
          name:"pro dev stuff",
          dueDate:"9-12-2023T10.00PM"
-       }
+       },
+       {
+         name:"pro dev stuff",
+         dueDate:"9-12-2023T10.00PM"
+       },
+       {
+         name:"pro dev stuff",
+         dueDate:"9-12-2023T10.00PM"
+       },
+       {
+         name:"pro dev stuff",
+         dueDate:"9-12-2023T10.00PM"
+       },
+       {
+         name:"pro dev stuff",
+         dueDate:"9-12-2023T10.00PM"
+       },
+       {
+         name:"pro dev stuff",
+         dueDate:"9-12-2023T10.00PM"
+       },
      ]
    },
    {
@@ -106,7 +126,7 @@ classes = [
      color:"green",
      name:"FSW23&24 | Soft Skills",
      instructor:'George Abed el Nour',
-     image:'./images/3177440.png',
+     image:'../images/3177440.png',
      description:"full stack web dev bootcamp soft skills department",
      assignments:[
        {
@@ -126,8 +146,8 @@ classes.forEach((studentClass, index) => {
   let assignmentDetails = ''
   assignments.forEach((assignment) => {
     assignmentDetails += `<div class="assignments">
-      <p class="class-subject">Due tomorow</p>
-      <p class="assignment-name">${assignment.dueDate.split("T")[1]} - ${assignment.name}</p>
+      <p class="classSubject">Due tomorow</p>
+      <p class="assignmentName">${assignment.dueDate.split("T")[1]} - ${assignment.name}</p>
       </div>
     `
   })
@@ -154,7 +174,7 @@ classes.forEach((studentClass, index) => {
             <path d="M12 13c1.94 0 3.5-1.56 3.5-3.5S13.94 6 12 6 8.5 7.56 8.5 9.5 10.06 13 12 13zm0-5c.83 0 1.5.67 1.5 1.5S12.83 11 12 11s-1.5-.67-1.5-1.5S11.17 8 12 8z"></path>
           </svg>
         </span>
-        <a href="/c/NjE1MzI3NzQ1ODkx/sp/NjE1NTAwOTkzOTIy/all" aria-label="Open your work for &quot;FSW 23&amp; 24 | Tech&quot;" data-tooltip-enabled="true" data-tooltip-id="zxtDBb615327745891" jsaction=""></a>
+        <a href="/c/NjE1MzI3NzQ1ODkx/sp/NjE1NTAwOTkzOTIy/all" aria-label="Open your work for &quot;FSW 23&amp; 24 | Tech&quot;" data-tooltip-enabled="true" data-tooltip-id="zxtDBb615327745891"></a>
       </div>
       <div class="bottomIcons">
         <span>
