@@ -73,10 +73,16 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       const result = await register()
       const jsonresult = await result.json()
-      if (jsonresult["status"] == "failed")
+      if (jsonresult["status"] == "failed") {
         email.value = ""
-      email.placeholder = 'Please choose another email.';
-      email.style.borderColor = "red";
+        email.placeholder = 'Please choose another email.';
+        email.style.borderColor = "red";
+      }
+      else {
+        location.replace("../html/landingPage.html");
+
+      }
+
 
     }
   })
