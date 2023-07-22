@@ -35,6 +35,7 @@ html, body {
 
   .right_side{
     display: flex;
+    width: 300px;
     min-width: 100px;
     justify-content: flex-end;
     align-items: center;
