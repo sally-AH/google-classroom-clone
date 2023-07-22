@@ -159,3 +159,9 @@ font-size: 15px;
 font-weight: 600;
 color: #5f6368;
 }
+
+.line.active{
+  background-color: black;
+  color: transparent;
+  line-height: 2px;
+}
