@@ -6,7 +6,26 @@ document.addEventListener("DOMContentLoaded", function () {
   let password = document.getElementById("password")
   let phonenumber = document.getElementById("phonenumber")
   let date = document.getElementById("date")
-  function checkfields() {
+  let loginemail = document.getElementById("loginemail")
+  let loginpassword = document.getElementById("loginpassword")
+  function checkloginfields() {
+    let check = true
+    if (loginemail.value == "") {
+      loginemail.style.borderColor = "red";
+      check = false;
+    } else {
+      loginemail.style.borderColor = "";
+    }
+    if (loginpassword.value == "") {
+      loginpassword.style.borderColor = "red";
+      check = false;
+    } else {
+      loginpassword.style.borderColor = "";
+    }
+    return check
+  }
+
+  function checkregisterfields() {
     let check = true;
     if (firstname.value == "") {
       firstname.style.borderColor = "red";
@@ -49,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   document.querySelector(".registerbtn").addEventListener("click", async (e) => {
 
-    if (checkfields()) {
+    if (checkregisterfields()) {
 
       jsdata = {
         user_email: email.value,
@@ -87,7 +106,39 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   })
 
+  document.querySelector(".loginbtn").addEventListener("click", async (e) => {
 
+    if (checkloginfields()) {
 
+      jsdata = {
+        user_email: email.value,
+        user_password: password.value,
+
+      }
+      const jsonobject = JSON.stringify(jsdata)
+      const default_url = "https://localhost/google-classroom-clone-backend/back-end/php/signin.php"
+
+      async function login() {
+
+        const response = await fetch(default_url, {
+          method: "POST",
+          body: jsonobject,
+
+        })
+        return response
+      }
+      const result = await login()
+      const jsonresult = await result.json()
+      if (jsonresult["status"] == "user not found") {
+        loginemail.value = ""
+        loginemail.style.borderColor = "red";
+      }
+      else {
+        location.replace("../html/landingPage.html");
+
+      }
+
+    }
+  })
 });
 
