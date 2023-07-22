@@ -190,6 +190,7 @@ html, body {
     width: 16px;
     height: 16px;
     margin-right: 10px;
+    cursor: pointer;
   }
   
   .meet_body{
@@ -204,6 +205,7 @@ html, body {
     color: white;
     border: none;
     border-radius: 4px;
+    cursor: pointer;
   }
 
   .assignments{
@@ -227,11 +229,32 @@ html, body {
 
   .assignments_due_date{
     font-size: 13px;
-    color: rgba(0,0,0,.549);
+    color: #0000008c;
     font-weight: 600;
     line-height: 1.25rem;
   }
 
   .assignments_due_date span:hover{
     text-decoration: underline;
+  }
+
+  .assignments_footer{
+    width: 100%;
+    padding: 0 1rem 0.4rem 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .assignments_footer button{
+    width: 70px;
+    height: 34px;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .assignments_footer button:hover{
+    background-color: #ededed;
+    color: #3c4043;
   }
