@@ -26,12 +26,11 @@
   
     justify-content: space-between;
 
-  min-width: 50vw;
+  min-width: 40vw;
   }
 
   .navLogo{
     height: 4rem;
-    padding-left: 3rem;
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -164,4 +163,48 @@ color: #5f6368;
   background-color: black;
   color: transparent;
   line-height: 2px;
+}
+
+.classwork{
+  margin-top:100px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.aside{
+  position: relative;
+  right: 550px;
+  top:-80px
+}
+.topics{
+  list-style: none; 
+  font-weight: 600;
+}
+.topic{
+  list-style: none; 
+  font-weight: 200;
+  margin: 20px 0px;
+  color: #5f6368;
+
+}
+.navAbove{
+  width:700px;
+display: flex;
+justify-content: space-between;
+margin-top:80px;
+margin-left: 33%;
+text-align: center;
+}
+
+.navLeft{
+  display: flex;
+  gap: 20px;
+  text-align: center;
+}
+.navText{
+  margin-top: 50px;
+
 }
