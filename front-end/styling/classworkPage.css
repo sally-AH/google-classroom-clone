@@ -1,3 +1,7 @@
+body{
+  min-width:100vw ;
+}  
+  
   .navbar {
     background: white;
     border-bottom: 0.0625rem solid #e0e0e0;
@@ -166,18 +170,19 @@ color: #5f6368;
 }
 
 .classwork{
-  margin-top:100px;
+  margin-top:50px;
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
+  gap: 244px;
   position: absolute;
+  right: 8vw;
 }
 
+
 .aside{
-  position: relative;
-  right: 550px;
-  top:-80px
+  
 }
 .topics{
   list-style: none; 
@@ -206,5 +211,110 @@ text-align: center;
 }
 .navText{
   margin-top: 50px;
+}
+
+
+.category{
+  list-style: none;
+  margin-left: 0;
+  
+  
 
 }
+.line.cat{
+  background-color: black;
+  color: transparent;
+  line-height: 1px;
+  padding-right: 700px;
+  
+}
+
+.assignmentsLogo{
+  height: 30px;
+  width: 30px;
+  margin-left: 5px;
+}
+.logoContainer{
+  height: 40px;
+  width: 40px;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  fill:aliceblue;
+}
+
+.singlePost{
+  margin-top: 10px;
+  display: flex;
+  text-align: center;
+}
+
+.assMat{
+  padding-left: 16px;
+  list-style: none; 
+
+}
+
+.title{
+  margin-left: 16px;
+  font-size: 32px;
+  margin-bottom: 10px
+}
+
+.assMat.text{
+  margin-top: 13px;
+  color: #5f6368;
+}
+
+/* Media query for smaller screens */
+/* @media (max-width: 768px) {
+  .navContent {
+    flex-direction: column;
+  }
+
+ 
+  .midNav {
+    min-width: auto;
+    margin-top: 20px;
+  }
+
+  .rightNav {
+    display: none;
+  }
+
+
+
+ 
+  .navAbove {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .navLogo {
+    justify-content: center;
+  }
+
+
+
+  .navContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+} */
+
+/* Media query for medium screens */
+/* @media (max-width: 1700px) {
+  .navContainer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .categories {
+    margin-left: 230px;
+  }
+  .line.cat{
+    margin-left: 240px;
+  }
+} */
