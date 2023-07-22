@@ -1,3 +1,9 @@
-document.addEventListener("load", function () {
-  // Your code goes here
+document.addEventListener("DOMContentLoaded", function () {
+  let signupbtn = document.getElementById("signupbtn")
+
+  signupbtn.addEventListener("click", () => {
+
+  })
+
+
 });
