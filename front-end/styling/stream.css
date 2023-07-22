@@ -128,6 +128,9 @@ html, body {
   .form_section{
     width: 100%;
     padding: 6rem 11%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
   }
 
   .form_header{
@@ -137,7 +140,20 @@ html, body {
 
   .form_header img {
     width: 100%;
-    background-size: cover;
     min-height: 180px;
     border-radius: 8px;
+  }
+
+  .form_body{
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+  }
+
+  .body_left{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #b82d2d;
   }
