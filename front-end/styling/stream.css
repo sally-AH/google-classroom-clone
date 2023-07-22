@@ -204,3 +204,33 @@ html, body {
     border: none;
     border-radius: 4px;
   }
+
+  .assignments{
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+  }
+
+  .assignments_header{
+    padding: 1rem 1rem 0 1rem;
+    font-size: 14px;
+    font-family: "Google Sans","Roboto",Arial,sans-serif;
+    font-weight: 600;
+    color: #3c4043;
+  }
+
+  .assignments_description{
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .assignments_due_date{
+    font-size: 13px;
+    color: rgba(0,0,0,.549);
+    font-weight: 600;
+    line-height: 1.25rem;
+  }
+
+  .assignments_due_date span:hover{
+    text-decoration: underline;
+  }
