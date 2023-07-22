@@ -44,3 +44,16 @@ posts = [
         due_date: "Due 07 Oct, 1:00 AM",
   }
 ]
+
+document.addEventListener("DOMContentLoaded", () => {
+  const ulElement = document.querySelector('.aside ul');
+  // Check if the 'ul' element was found
+  for(i  in posts){
+    console.log(posts[i].category)
+    if (ulElement) {
+      ulElement.innerHTML+=`<li class="topic">${posts[i].category}</li>`
+      // Add your code to interact with the 'ul' element here
+    }
+  }
+  
+})
