@@ -143,6 +143,7 @@ classes.forEach((studentClass, index) => {
   const { id, name, color, image, instructor, description, assignments } = studentClass
 
 
+
   let assignmentDetails = ''
   assignments.forEach((assignment) => {
     assignmentDetails += `<div class="assignments">
@@ -157,8 +158,11 @@ classes.forEach((studentClass, index) => {
     <div class="header" style="background-color:${color}; background-image: url(${image});">
 
         <h3 class="className">${name}</h3>
+        <img class="teacherIcon" aria-hidden="true" src="../images/3177440.png" data-atf="true">
         <h3 class="className desc">${description}</h3>
+        
       </div>
+      
       ${assignmentDetails}
       <button class="dots">
         <span>
@@ -167,6 +171,7 @@ classes.forEach((studentClass, index) => {
           </svg>
         </span>
       </button>
+      
       </div>
       <div class="bottom">
       
@@ -192,12 +197,19 @@ classes.forEach((studentClass, index) => {
     </div>
       </div>`
   )
+ 
 })
 
 console.log(bodyContent)
 const body = document.querySelector(".classes")
 body.innerHTML = bodyContent.join('')
+const assdd = document.querySelector(".header").addEventListener('click' , ()=>{
+console.log(11)
+})
+const assdd1 = document.querySelector(".iconSvg").addEventListener('click' , ()=>{
+console.log(12)
 
+})
 
 
 
