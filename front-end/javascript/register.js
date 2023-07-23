@@ -133,6 +133,10 @@ document.addEventListener("DOMContentLoaded", function () {
         loginemail.value = ""
         loginemail.style.borderColor = "red";
       }
+      if (jsonresult["status"] == "user not found") {
+        loginemail.value = ""
+        loginemail.style.borderColor = "red";
+      }
       else {
         location.replace("../html/landingPage.html");
 
