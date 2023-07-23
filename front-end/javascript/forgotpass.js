@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let newpassword = ""
 
   document.querySelector(".forgotbtn").addEventListener("click", async (e) => {
-
     function passwordgenerator() {
       var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
       var passwordLength = 12;
@@ -15,25 +14,37 @@ document.addEventListener("DOMContentLoaded", function () {
       return password
     }
     newpassword = passwordgenerator()
-
     jsdata = {
       email: forgotemail.value,
       password: newpassword
     }
     const jsonobject = JSON.stringify(jsdata)
-    const default_url = "https://localhost/google-classroom-clone/back-end/php/send.php"
 
-    async function sendmemail() {
-
+    async function sendemail() {
+      var default_url = "https://localhost/google-classroom-clone/back-end/php/send.php"
       const response = await fetch(default_url, {
         method: "POST",
-        body: jsonobject,
+        body: jsonobject
 
       })
       return response
     }
-    const result = await sendmemail()
-    const jsonresult = await result.json()
+    async function updatepass() {
+      var default_url = "https://localhost/google-classroom-clone/back-end/php/updatepassword.php"
+      response = await fetch(default_url, {
+        method: "POST",
+        body: jsonobject
+
+      })
+      return response
+    }
+    var result = await sendemail()
+
+    var result2 = await updatepass()
+    var jsonresult2 = await result2.json()
+    console.log(jsonresult2)
+
+
 
 
   }

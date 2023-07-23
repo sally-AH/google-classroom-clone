@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const jsonresult = await result.json()
       if (jsonresult["status"] == "failed") {
         email.value = ""
-        email.placeholder = 'Please choose another email.';
+        email.placeholder = 'Please choose another email';
         email.style.borderColor = "red";
       }
       else {
