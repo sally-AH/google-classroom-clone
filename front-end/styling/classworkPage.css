@@ -181,8 +181,8 @@ color: #5f6368;
 }
 
 
-.aside{
-  
+.topicsContainer{
+  width: 100px;
 }
 .topics{
   list-style: none; 
@@ -229,6 +229,7 @@ text-align: center;
   
 }
 
+
 .assignmentsLogo{
   height: 30px;
   width: 30px;
@@ -244,16 +245,34 @@ text-align: center;
   text-align: center;
   border-radius: 50%;
   fill:aliceblue;
+  margin-left: 12px;
+}
+.logoContainer2{
+  height: 40px;
+  width: 40px;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  fill:aliceblue;
+  margin-left: 12px;
+}
+.logoMat{
+  margin-left: 7px;
 }
 
 .singlePost{
   margin-top: 10px;
   display: flex;
   text-align: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  width: 800px; 
 }
 
 .assMat{
-  padding-left: 16px;
+  padding-left: 2px;
   list-style: none; 
 
 }
@@ -267,54 +286,12 @@ text-align: center;
 .assMat.text{
   margin-top: 13px;
   color: #5f6368;
+  margin-left: 15px;
 }
 
-/* Media query for smaller screens */
-/* @media (max-width: 768px) {
-  .navContent {
-    flex-direction: column;
-  }
-
- 
-  .midNav {
-    min-width: auto;
-    margin-top: 20px;
-  }
-
-  .rightNav {
-    display: none;
-  }
-
-
-
- 
-  .navAbove {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .navLogo {
-    justify-content: center;
-  }
-
-
-
-  .navContainer {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-} */
-
 /* Media query for medium screens */
-/* @media (max-width: 1700px) {
-  .navContainer {
-    padding-left: 40px;
-    padding-right: 40px;
+@media (max-width: 1700px) {
+  .aside{
+    margin-left: 200px;
   }
-  .categories {
-    margin-left: 230px;
-  }
-  .line.cat{
-    margin-left: 240px;
-  }
-} */
+}
