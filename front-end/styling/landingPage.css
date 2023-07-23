@@ -179,10 +179,20 @@ justify-content: space-between;
   color: white;
   border: none;
 }
-
+.teacherIcon {
+  border-radius: 50%;
+  float: right;
+  height: 4.6875rem;
+  /* position: relative; */
+  
+  /* right: 1rem;
+  width: 4.6875rem; */
+}
 
 .iconSvg {
   fill: white;
+  margin-top: 30px;
+  cursor: pointer;
 
 }
 
