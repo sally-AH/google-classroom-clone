@@ -164,9 +164,12 @@ justify-content: space-between;
   border-radius: 10px 10px 0 0;
   background-size: cover; /* Adjust the image size to cover the element */
   background-position: center center;
+  opacity: 0.85;
 
 }
-
+.bgImage{
+  
+}
 .eleven{
   color: red;
 }
@@ -183,6 +186,7 @@ justify-content: space-between;
   border-radius: 50%;
   float: right;
   height: 4.6875rem;
+  z-index: 0; 
 }
 
 .iconSvg {
