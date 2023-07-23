@@ -65,7 +65,7 @@ body {
 
 .section_header img {
     width: 100px;
-    height: 30px;
+    height: 35px;
 }
 
 .body {
@@ -162,4 +162,8 @@ body {
     font-size: 12px;
     font-weight: 400;
     font-family: "roboto", "Noto Sans Myanmar UI", arial, sans-serif;
+}
+
+.forget_password{
+    min-height: 320px;
 }

@@ -32,7 +32,7 @@ classes = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     color: "green",
     name: "FSW23&24 | Soft Skills",
     instructor: 'George Abed el Nour',
@@ -46,7 +46,7 @@ classes = [
     ]
   },
   {
-    id: 2,
+    id: 4,
     color: "green",
     name: "FSW23&24 | Soft Skills",
     instructor: 'George Abed el Nour',
@@ -60,7 +60,7 @@ classes = [
     ]
   },
   {
-    id: 2,
+    id: 5,
     color: "green",
     name: "FSW23&24 | Soft Skills",
     instructor: 'George Abed el Nour',
@@ -74,7 +74,7 @@ classes = [
     ]
   },
   {
-    id: 2,
+    id: 6,
     color: "green",
     name: "FSW23&24 | Soft Skills",
     instructor: 'George Abed el Nour',
@@ -88,7 +88,7 @@ classes = [
     ]
   },
   {
-    id: 2,
+    id: 7,
     color: "green",
     name: "FSW23&24 | Soft Skills",
     instructor: 'George Abed el Nour',
@@ -122,7 +122,7 @@ classes = [
     ]
   },
   {
-    id: 2,
+    id: 8,
     color: "green",
     name: "FSW23&24 | Soft Skills",
     instructor: 'George Abed el Nour',
@@ -139,10 +139,12 @@ classes = [
 ]
 
 const bodyContent = []
+const selectedPage = 0
 classes.forEach((studentClass, index) => {
   const { id, name, color, image, instructor, description, assignments } = studentClass
 
 
+  
 
   let assignmentDetails = ''
   assignments.forEach((assignment) => {
@@ -157,9 +159,9 @@ classes.forEach((studentClass, index) => {
     <div class="top">
     <div class="header" style="background-color:${color}; background-image: url(${image});">
 
-        <h3 class="className">${name}</h3>
+        <h3 class="className ${id}">${name}</h3>
         <img class="teacherIcon" aria-hidden="true" src="../images/3177440.png" data-atf="true">
-        <h3 class="className desc">${description}</h3>
+        <h3 class="className desc ${id}">${description}</h3>
         
       </div>
       
@@ -203,13 +205,17 @@ classes.forEach((studentClass, index) => {
 console.log(bodyContent)
 const body = document.querySelector(".classes")
 body.innerHTML = bodyContent.join('')
-const assdd = document.querySelector(".header").addEventListener('click' , ()=>{
-console.log(11)
+
+const heads = document.querySelectorAll('.header')
+console.log(heads)
+heads.forEach((head)=>{
+  head.addEventListener('click' , (e)=>{
+    console.log(e.target.classList)
+    if(e.target.classList[1] && e.target.classList[1]!=='desc'){
+      window.location.href = `../html/stream.html?id=${e.target.classList[1]}`
+    }else if(e.target.classList[1]==='desc'){
+      window.location.href = `../html/stream.html?id=${e.target.classList[1]}`
+    }
+  })
 })
-const assdd1 = document.querySelector(".iconSvg").addEventListener('click' , ()=>{
-console.log(12)
-
-})
-
-
 

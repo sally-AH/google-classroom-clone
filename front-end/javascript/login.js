@@ -45,16 +45,17 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(jsonresult)
       if (jsonresult["status"] == "user not found") {
         loginemail.value = ""
+        loginpassword.value = ""
         loginemail.style.borderColor = "red"
         loginpassword.style.borderColor = "red"
       }
       if (jsonresult["status"] == "wrong password") {
         loginpassword.style.borderColor = "red"
+        loginpassword.value = ""
+
       }
-      else {
-
-        location.replace("front-end/html/landingPage.html");
-
+      if (jsonresult["status"] == "logged in") {
+        location.replace("../html/landingPage.html");
       }
 
     }
