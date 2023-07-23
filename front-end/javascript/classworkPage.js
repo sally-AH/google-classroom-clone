@@ -41,7 +41,7 @@ posts = [
   {
         id: 5,
         post_type: 'material',
-        category:"JavaScript",
+        category:"Ja",
         name:"DOM Manipulation",
         due_date: "Due 26 Jul, 10:00 PM",
         text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
@@ -59,7 +59,7 @@ posts = [
   {
         id: 7,
         post_type: 'material',
-        category:"JavaScript",
+        category:"",
         name:"DOM Manipulation",
         due_date: "Due 26 Jul, 10:00 PM",
         text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
   for (let i in posts) {
-    if(!categories.includes(posts[i].category)){
+    if(!categories.includes(posts[i].category) && posts[i].category !== ""){
       categories.push(posts[i].category);
       if (ulElement) {
         ulElement.innerHTML += `<li class="topic">${posts[i].category}</li>`;
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     console.log(elementsWithCategory);
     if (!posts[i].category) {
-      const noCategUl = document.querySelector('.noCateg ul');
+      const noCategUl = document.querySelector('.assMat');
       if (noCategUl) {
         noCategUl.innerHTML += `
         <li>
@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>` }
                   </div>
                   <div>
-                    <h4 class="assMat text">Full Stack stuff</h4>
+                    <h4 class="assMat text">${posts[i].name}</h4>
                   </div>  
                 </div>  
               </div>

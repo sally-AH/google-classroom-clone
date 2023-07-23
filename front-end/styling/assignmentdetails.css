@@ -154,6 +154,7 @@ html, body{
     flex-direction: column;
     row-gap: 1rem;
     padding: 1rem;
+    
 }
 
 .section_header_container{
