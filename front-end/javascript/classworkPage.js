@@ -7,6 +7,8 @@ posts = [
         title: "Fetch/PHP Assignment Correction",
         instructo: 'Khaled Faour',
         posted_date: 'Yesterday',
+        text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
+        files:""
   },
 
   {
@@ -15,6 +17,8 @@ posts = [
         category:"PHP",
         name:" Google Classroom Clone",
         due_date: "Due 15 Dec, 10:00 PM",
+        text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
+        files:""
   },
   {
         id: 3,
@@ -22,6 +26,8 @@ posts = [
         category:"PHP",
         name:"Log in Sign Up",
         due_date: "Due 12 Dec, 6:00 AM",
+        text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
+        files:""
   },
   {
         id: 4,
@@ -29,6 +35,8 @@ posts = [
         category:"SQL",
         name:"Tables and relations",
         due_date: "Due 11 Jan, 11:00 PM",
+        text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
+        files:""
   },
   {
         id: 5,
@@ -36,21 +44,29 @@ posts = [
         category:"JavaScript",
         name:"DOM Manipulation",
         due_date: "Due 26 Jul, 10:00 PM",
+        text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
+        files:""
   },
   {
         id: 6,
-        post_type: 'assignment',
-        category:"UI/UX Design",
-        name:"Color Theory",
-        due_date: "Due 07 Oct, 1:00 AM",
+        post_type: 'material',
+        category:"",
+        name:"DOM Manipulation",
+        due_date: "Due 26 Jul, 10:00 PM",
+        text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
+        files:""
   },
   {
         id: 7,
         post_type: 'material',
-        category:"",
-        name:"Color Theory",
-        due_date: "Due 07 Oct, 1:00 AM",
+        category:"JavaScript",
+        name:"DOM Manipulation",
+        due_date: "Due 26 Jul, 10:00 PM",
+        text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
+        files:""
   },
+  
+
 ]
 
 const categories = []
@@ -69,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
   }
-
+  
   for (let i = 0; i < categories.length; i++) {
     const joinedName = categories[i].trim().replace(/\s/g, '');
     document.querySelector(".categories").innerHTML += `
@@ -89,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <ul  class="assMat">
           <li>
             <div>
-              <div class="singlePost">
+              <div class="singlePost  post${posts[i].id}">
                 ${posts[i].post_type === "assignment"? `<div class="logoContainer">
                 <svg
                 focusable="false"
@@ -108,6 +124,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div>
                   <h4 class="assMat text">${posts[i].name}</h4>
                 </div>
+                
+              </div>
+              <div class="accordion-content  post${posts[i].id} ">
+              
+              <div class="innerAccordion">
+              <p>${posts[i].text_content}</p>
+                </div>
               </div>
             </div>
           </li>
@@ -120,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
         noCategUl.innerHTML += `
         <li>
               <div class="">
-                <div class="singlePost">
+                <div class="singlePost  post${posts[i].id}">
                   <div>
                   ${posts[i].post_type === "assignment"? `<div class="logoContainer">
                   <svg
@@ -142,6 +165,13 @@ document.addEventListener("DOMContentLoaded", () => {
                   </div>  
                 </div>  
               </div>
+              <div class="accordion-content  post${posts[i].id}">
+              <p>${posts[i].text_content}</p>
+              <div class="flex-box">
+                
+                </div>
+              </div>
+            </div>
             </li>
             
             `;
@@ -149,8 +179,13 @@ document.addEventListener("DOMContentLoaded", () => {
       
     }
   }
-  
+  const singlePosts = document.querySelectorAll(".singlePost");
+  singlePosts.forEach((post) => {
+    post.addEventListener("click", (e) => {
+      const postId = e.currentTarget.classList[1];
+      const accordionContent = document.querySelector(`.accordion-content.${postId}`)
+      accordionContent.classList.toggle("active");
+    });
+  });
+
 });
-
-
-{/*  */}

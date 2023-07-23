@@ -36,7 +36,7 @@ classes = [
     color: "green",
     name: "FSW23&24 | Soft Skills",
     instructor: 'George Abed el Nour',
-    image: '../images/3177440.png',
+    image: '../images/SEFlogo.png',
     description: "full stack web dev bootcamp soft skills department",
     assignments: [
       {
@@ -157,12 +157,13 @@ classes.forEach((studentClass, index) => {
   bodyContent.push(`
     <div class="classCard">
     <div class="top">
-    <div class="header" style="background-color:${color}; background-image: url(${image});">
-
-        <h3 class="className ${id}">${name}</h3>
-        <img class="teacherIcon" aria-hidden="true" src="../images/3177440.png" data-atf="true">
-        <h3 class="className desc ${id}">${description}</h3>
-        
+  
+      <div class="header" style="background-color:${color}; background-image: url(${image});">
+        <div>
+          <h3 class="className ${id}">${name}</h3>
+          <img class="teacherIcon" aria-hidden="true" src="../images/3177440.png" data-atf="true">
+          <h3 class="className desc ${id}">${description}</h3>
+        </div> 
       </div>
       
       ${assignmentDetails}
