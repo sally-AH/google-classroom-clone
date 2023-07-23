@@ -268,18 +268,98 @@ html, body{
     height: 100%;
     display: flex;
     column-gap: 1rem;
-    background-color: #1E8E3E;
+    /* background-color: #1E8E3E; */
 }
 
 .Assignment{
     width: 100%;
-    padding: 1rem;
+    padding: 1.5rem;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 6px 0 rgba(0, 0, 0, 0.19);
 }
 
 .right_section_header{
     width: 100%;
     display: flex;
     justify-content: space-between;
+        font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 1.375rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    color: #3c4043;
+}
+
+.assignment_status{
+    font-size: 14px;
+    color: #1E8E3E;
+}
+
+.Uploaded_file{
+    width: 252px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.upload_file_left{
+    flex:1;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.Uploaded_file p{
+    letter-spacing: .01785714em;
+    font-family: "Google Sans","Roboto",Arial,sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: #3c4043;
+}
+
+.Uploaded_file img{
+    width: 26px;
+    height: 26px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.upload{
+    width: 252px;
+    height: 38px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    color: #1E8E3E;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.upload img{
+    width:13px;
+    height: 13px;
+}
+
+.submit{
+    width: 252px;
+    height: 38px;
+    background-color: #1E8E3E;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
 }
