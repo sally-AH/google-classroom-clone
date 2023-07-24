@@ -1,60 +1,39 @@
-const people = [
-  {
-    id: 1,
-    teacherName: "Teacher name",
-    teacherImage: "/front-end/images/3177440.png",
-    role: "teacher",
-  },
-  {
-    id: 2,
-    studentName: "Student name",
-    studentImage: "/front-end/images/3177440.png",
-    role: "student",
-  },
-  {
-    id: 3,
-    teacherName: "Another teacher",
-    teacherImage: "/front-end/images/3177440.png",
-    role: "teacher",
-  },
-  {
-    id: 4,
-    studentName: "Another student",
-    studentImage: "/front-end/images/3177440.png",
-    role: "student",
-  },
-];
 
 const teacherUsers = [];
 const studentUsers = [];
 
-async function getpeople() {
+async function get() {
   try {
-    const response = await fetch("");
-    const people = await response.json();
+    const response = await fetch("http://localhost/google-classroom-clone/php/people.php", {
+      method: "POST",
+      body: JSON.stringify({ class_id: 1 }) 
+    });
+    const { data } = await response.json(); 
+    console.log(data)
+    data.forEach((element) => {
+      const photo = element.photo;
+      const userId = element.user_id;
+      const role = element.user_role_id;
+      const fname = element.f_name;
 
-    people.forEach((element) => {
-      const { id, teacherName, teacherImage, role } = element;
-      const { id: studentId, studentName, studentImage } = element;
-
-      if (role === "teacher") {
+      if (role === 1) {
         teacherUsers.push(`
-            <div class="container1" id="${id}">
-              <img src="${teacherImage}" alt="Teacher image">
-              <div>
-                <p class="TeacherName">${teacherName}</p>
-              </div>
+          <div class="container1" id="${userId}">
+            <img src="${photo}" alt="Teacher image">
+            <div>
+              <p class="TeacherName">${fname}</p>
             </div>
-          `);
-      } else if (role === "student") {
+          </div>
+        `);
+      } else if (role === 2) {
         studentUsers.push(`
-            <div class="container2" id="${studentId}">
-              <img src="${studentImage}" alt="Student image">
-              <div>
-                <p class="studentName">${studentName}</p>
-              </div>
+          <div class="container2" id="${userId}">
+            <img src="${photo}" alt="Student image">
+            <div>
+              <p class="studentName">${fname}</p>
             </div>
-          `);
+          </div>
+        `);
       }
     });
 
@@ -64,8 +43,8 @@ async function getpeople() {
     const studentSection = document.querySelector(".down_part");
     studentSection.innerHTML = studentUsers.join("");
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.log("Error fetching data:", error);
   }
 }
 
-getpeople();
+get();
