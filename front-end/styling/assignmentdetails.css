@@ -407,8 +407,7 @@ html, body{
 .upload_files_popup{
   width: 100%;
   height: 100%;
-  display: none; 
-  /* set this display: to visible; */
+  display: none;
   align-items: center;
   justify-content: center;
   position: fixed;
