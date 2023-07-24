@@ -18,6 +18,7 @@ function gotToPage(event){
 
 /////////////////////////////////////////////
 
+// dummby data
 posts = [
   {
         id: 1,
@@ -64,12 +65,10 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>`;
   }
 
-  const singlePosts = document.querySelectorAll(".singlePost");
+  const singlePosts = document.querySelectorAll(".post");
   singlePosts.forEach((post) => {
     post.addEventListener("click", (e) => {
-      const postId = e.currentTarget.classList[1];
-      const accordionContent = document.querySelector(`.accordion-content.${postId}`)
-      accordionContent.classList.toggle("active");
+    //   const postId = e.currentTarget.classList[1]; send this id to next page
     });
   });
 
