@@ -205,3 +205,12 @@ WHERE class_id = ? AND user_role_id = 3 AND user_id NOT IN (
             PL.class_id = ? AND PL.user_role_id = 3 AND 
             UA.post_id = ? AND post_type_id = 1
 )
+
+--35
+UPDATE users SET user_password = ? WHERE user_email = ?
+
+--36
+SELECT posts.post_id, posts.post_type_id, posts.teacher_id, posts.start_date, posts.end_date, posts.post_title, posts.post_body, posts.post_attachment, posts.post_grade 
+FROM posts 
+JOIN class_rooms_posts ON posts.post_id = class_rooms_posts.post_id 
+WHERE class_rooms_posts.class_id = '1';
