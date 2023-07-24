@@ -24,7 +24,6 @@ const people = [
       role: "student",
     },
   ];
-
   
   const teacherUsers = [];
   const studentUsers = [];
