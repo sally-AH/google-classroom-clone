@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var jsonresult = await result.json()
     if (jsonresult['status'] == 'token match') {
+      window.location.href = `../html/newpassword.html?id=${email}`
 
     }
     else {
