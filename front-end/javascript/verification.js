@@ -1,22 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
   let forgotemail = document.getElementById("forgotemail")
-  let newpassword = ""
+
 
   document.querySelector(".forgotbtn").addEventListener("click", async (e) => {
-    function passwordgenerator() {
+    function tokengenerator() {
       var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      var passwordLength = 12;
-      var password = "";
-      for (var i = 0; i <= passwordLength; i++) {
+      var tokenlength = 6;
+      var token = "";
+      for (var i = 0; i <= tokenlength; i++) {
         var randomNumber = Math.floor(Math.random() * chars.length);
-        password += chars.substring(randomNumber, randomNumber + 1);
+        token += chars.substring(randomNumber, randomNumber + 1);
       }
-      return password
+      return token
     }
-    newpassword = passwordgenerator()
+    newtoken = tokengenerator()
+
     jsdata = {
-      email: forgotemail.value,
-      password: newpassword
+      user_email: forgotemail.value,
+      user_token: newtoken
     }
     const jsonobject = JSON.stringify(jsdata)
 
@@ -29,8 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       return response
     }
-    async function updatepass() {
-      var default_url = "https://localhost/google-classroom-clone/back-end/php/updatepassword.php"
+    async function addtoken() {
+      var default_url = "https://localhost/google-classroom-clone/back-end/php/updatetoken.php"
       response = await fetch(default_url, {
         method: "POST",
         body: jsonobject
@@ -40,10 +41,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     var result = await sendemail()
 
-    var result2 = await updatepass()
-    var jsonresult2 = await result2.json()
-    console.log(jsonresult2)
+    var result2 = await addtoken()
 
+    var jsonresult = await result2.json()
+
+
+
+    if (jsonresult['status'] == "token added") {
+      window.location.href = `../html/token.html?id=${forgotemail.value}`
+
+    }
+    else {
+      forgotemail.value = ""
+      forgotemail.placeholder = "Wrong email"
+      forgotemail.style.borderColor = "red";
+
+    }
 
 
 
