@@ -8,22 +8,22 @@ document.addEventListener("DOMContentLoaded", function () {
   let date = document.getElementById("date")
   let loginemail = document.getElementById("loginemail")
   let loginpassword = document.getElementById("loginpassword")
-  function checkloginfields() {
-    let check = true
-    if (loginemail.value == "") {
-      loginemail.style.borderColor = "red";
-      check = false;
-    } else {
-      loginemail.style.borderColor = "";
-    }
-    if (loginpassword.value == "") {
-      loginpassword.style.borderColor = "red";
-      check = false;
-    } else {
-      loginpassword.style.borderColor = "";
-    }
-    return check
-  }
+  // function checkloginfields() {
+  //   let check = true
+  //   if (loginemail.value == "") {
+  //     loginemail.style.borderColor = "red";
+  //     check = false;
+  //   } else {
+  //     loginemail.style.borderColor = "";
+  //   }
+  //   if (loginpassword.value == "") {
+  //     loginpassword.style.borderColor = "red";
+  //     check = false;
+  //   } else {
+  //     loginpassword.style.borderColor = "";
+  //   }
+  //   return check
+  // }
 
   function checkregisterfields() {
     let check = true;
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   })
 
-  document.querySelector(".loginbtn").addEventListener("click", async (e) => {
+  document.querySelector(".registerbtn").addEventListener("click", async (e) => {
 
     if (checkloginfields()) {
 
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       }
       const jsonobject = JSON.stringify(jsdata)
-      const default_url = "https://localhost/google-classroom-clone-backend/back-end/php/signin.php"
+      const default_url = "http://localhost/google-classroom-clone-backend/back-end/php/signin.php"
 
       async function login() {
 
@@ -130,12 +130,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const result = await login()
       const jsonresult = await result.json()
       if (jsonresult["status"] == "user not found") {
-        loginemail.value = ""
-        loginemail.style.borderColor = "red";
+        // loginemail.value = ""
+        // loginemail.style.borderColor = "red";
       }
       if (jsonresult["status"] == "user not found") {
-        loginemail.value = ""
-        loginemail.style.borderColor = "red";
+        // loginemail.value = ""
+        // loginemail.style.borderColor = "red";
       }
       else {
         location.replace("../html/landingPage.html");
