@@ -1,9 +1,11 @@
+
+const id = 1;
 const teacherUsers = [];
 const studentUsers = [];
 
 async function get() {
   try {
-    const response = await fetch("http://localhost/google-classroom-clone/back-end/php/people.php", {
+    const response = await fetch("http://localhost/google-classroom-clone/back-end/php/people.php?id", {
       method: "POST",
       body: JSON.stringify({ class_id: 1 }) 
     });
@@ -37,13 +39,15 @@ async function get() {
     });
 
     const teacherSection = document.querySelector(".upper_part");
-    teacherSection.innerHTML = teacherUsers.join("");
+    teacherSection.innerHTML += teacherUsers.join("");
 
     const studentSection = document.querySelector(".down_part");
-    studentSection.innerHTML = studentUsers.join("");
+    studentSection.innerHTML += studentUsers.join("");
   } catch (error) {
     console.log("Error fetching data:", error);
   }
 }
 
 get();
+
+
