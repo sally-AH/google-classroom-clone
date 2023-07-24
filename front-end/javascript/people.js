@@ -1,36 +1,11 @@
-const people = [
-  {
-    id: 1,
-    teacherName: "Teacher name",
-    teacherImage: "/front-end/images/3177440.png",
-    role: "teacher",
-  },
-  {
-    id: 2,
-    studentName: "Student name",
-    studentImage: "/front-end/images/3177440.png",
-    role: "student",
-  },
-  {
-    id: 3,
-    teacherName: "Another teacher",
-    teacherImage: "/front-end/images/3177440.png",
-    role: "teacher",
-  },
-  {
-    id: 4,
-    studentName: "Another student",
-    studentImage: "/front-end/images/3177440.png",
-    role: "student",
-  },
-];
 
+const id = 1;
 const teacherUsers = [];
 const studentUsers = [];
 
 async function get() {
   try {
-    const response = await fetch("http://localhost/google-classroom-clone/back-end/php/people.php", {
+    const response = await fetch("http://localhost/google-classroom-clone/back-end/php/people.php?id", {
       method: "POST",
       body: JSON.stringify({ class_id: 1 }) 
     });
@@ -64,10 +39,10 @@ async function get() {
     });
 
     const teacherSection = document.querySelector(".upper_part");
-    teacherSection.innerHTML = teacherUsers.join("");
+    teacherSection.innerHTML += teacherUsers.join("");
 
     const studentSection = document.querySelector(".down_part");
-    studentSection.innerHTML = studentUsers.join("");
+    studentSection.innerHTML += studentUsers.join("");
   } catch (error) {
     console.log("Error fetching data:", error);
   }
