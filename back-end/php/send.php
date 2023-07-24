@@ -43,8 +43,8 @@ try {
 
     //Content
     $mail->isHTML(true); //Set email format to HTML
-    $mail->Subject = "this is a test email";
-    $mail->Body    = "your new password is : ".$receivedtoken;
+    $mail->Subject = "Google Recovery Team ";
+    $mail->Body    = "Your Verification Code is :": ".$receivedtoken;
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
