@@ -1,4 +1,23 @@
+let btnClicked = false;
 
+window.addEventListener('load',function(){
+  const add_symbol= document.getElementById("addSymbol");
+  add_symbol.addEventListener("click", function(){
+    btnClicked = !btnClicked;
+    checkToggle();
+    console.log(btnClicked);
+  });
+})
+
+function checkToggle(){
+  if (btnClicked == true){
+    const module=document.getElementById("popup");
+    module.style.display = "block";
+  }else{
+    const module=document.getElementById("popup");
+    module.style.display = "none";
+  }
+}
 
 classes = [
 

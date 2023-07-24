@@ -275,6 +275,7 @@ justify-content: space-between;
 }
 
 .popup{
+  display: none;
   width: 121px;
   height: 100px;
   position: absolute;
