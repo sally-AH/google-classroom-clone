@@ -7,10 +7,7 @@
   top: 0;
   transform: none;
   width: 100%;
-  z-index: 986;
-  
-   
-
+  z-index: 1;
 }
 
 .navContent {
@@ -167,9 +164,9 @@ justify-content: space-between;
   opacity: 0.85;
 
 }
-.bgImage{
+/* .bgImage{
   
-}
+} */
 .eleven{
   color: red;
 }
@@ -193,10 +190,7 @@ justify-content: space-between;
   fill: white;
   margin-top: 30px;
   cursor: pointer;
-
 }
-
-
 
 .className {
 
@@ -205,12 +199,13 @@ justify-content: space-between;
     font-weight: 400;
     line-height: 1.75rem;
     color: #fff;
-
 }
+
 .className:hover {
   text-decoration: underline;
   cursor: pointer;
 }
+
 .className.desc {
   font-family: "Google Sans",Roboto,Arial,sans-serif;
     font-size: 1rem;
@@ -220,6 +215,7 @@ justify-content: space-between;
     width: 80%;
     min-width: 250px;
 }
+
 .className.desc:hover {
   text-decoration: underline;
   cursor: pointer;
@@ -233,8 +229,6 @@ justify-content: space-between;
   max-height: 350px;
   margin-top: 20px;
   margin-left: 80px;
-  
- 
 }
 
 .bottomIcons{
@@ -242,12 +236,14 @@ justify-content: space-between;
    
    padding: 20px;
 }
+
 .bottomIcons:hover{
    border-radius: 50%;
    padding: 20px;
    background-color: rgb(234, 234, 247);
    cursor: pointer;
 }
+
 .footer{
   border:1px solid rgba(0,0,0,.1) ;
   display: flex;
@@ -255,12 +251,11 @@ justify-content: space-between;
   justify-content: flex-end;
   margin-top: 32px;
   height: 60px;
-  
 }
+
 .assignmentName{
   margin: 0;
 }
-
 
 .assignments{
   display: flex;
@@ -272,10 +267,49 @@ justify-content: space-between;
 
 }
 
-
 .classSubject{
   font-size: 14px;
   color: #777;
   padding: 0;
   margin-bottom: 3px;
+}
+
+.popup{
+  width: 121px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 40px;
+  margin-right: 155px;
+  border-radius: 4px;
+  z-index: 2;
+  background-color: white;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 6px 0 rgba(0, 0, 0, 0.19);
+}
+
+.popup_container{
+  width: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.popup_btn{
+  width: 101px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.popup_btn:hover{
+  background-color: #e0e0e0;
+}
+
+.popup_btn p{
+  font-family: Roboto,Arial,sans-serif;
+  line-height: 1rem;
+  font-size: 1rem;
+  letter-spacing: .00625em;
+  font-weight: 400;
 }
