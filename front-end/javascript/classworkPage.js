@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async() => {
   })
   const data = await response.json()
   posts = data
-  console.log(data)
+  // console.log(data)
   const ulElement = document.querySelector('.aside ul');
   const categories = [];
   
@@ -150,5 +150,31 @@ document.addEventListener("DOMContentLoaded", async() => {
       post.classList.toggle("active");
     });
   });
+  const topicElements = document.querySelectorAll(".topic");
+  
+  topicElements.forEach((topicElement) => {
+    topicElement.addEventListener("click", () => {
+      
+      const category = topicElement.textContent;
 
+      const assignmentElements = document.querySelector(".categories");
+      const liElements = assignmentElements.querySelectorAll("li.category")
+      const allTopics = document.querySelector(".topics")
+      allTopics.addEventListener("click" , ()=>{
+        liElements.forEach((assignmentElement) => {
+          assignmentElement.style.display = "block";
+        });
+      })
+      liElements.forEach((assignmentElement) => {
+
+        const joinedName = assignmentElement.classList[1].trim().replace(/\s/g, '');
+        console.log(joinedName)
+        if (joinedName === category.trim().replace(/\s/g, '')) {
+          assignmentElement.style.display = "block"; 
+        } else {
+          assignmentElement.style.display = "none"; 
+        }
+      });
+    });
+  });
 });

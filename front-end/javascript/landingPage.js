@@ -318,7 +318,7 @@ heads.forEach((head)=>{
     if(e.target.classList[1] && e.target.classList[1]!=='desc'){
       window.location.href = `../html/stream.html?id=${e.target.classList[1]}`
     }else if(e.target.classList[1]==='desc'){
-      window.location.href = `../html/stream.html?id=${e.target.classList[1]}`
+      window.location.href = `../html/stream.html?id=${e.target.classList[2]}`
     }
   })
 })
