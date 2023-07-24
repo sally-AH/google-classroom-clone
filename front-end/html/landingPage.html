@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../styling/landingPage.css">
   <title>Classes</title>
 </head>
-  <body>
+  <body id="body">
     <nav class="navbar">
       <div class="navContent">
         <div class="navContainer">
@@ -80,11 +80,11 @@
     <div id="popup" class="popup">
       <div class="popup_container">
         <div class="popup_btn"><p>Join class</p></div>
-        <div class="popup_btn"><p>Create class</p></div>
+        <div id="createClassBtn" class="popup_btn"><p>Create class</p></div>
       </div>
     </div>
 
-    <div class="create_class_popup">
+    <div id="create_class_popup" class="create_class_popup">
       <div class="class_popup_container">
         <div class="container_title">Create class</div>
         <input type="text" placeholder="Class name (required)">
@@ -92,8 +92,8 @@
         <input type="text" placeholder="Subject">
         <input type="text" placeholder="Room">
         <div class="container_footer">
-          <div class="footer_btn">Cancel</div>
-          <div class="footer_btn">Create</div>
+          <div id="cancel" class="footer_btn">Cancel</div>
+          <div id="create" class="footer_btn">Create</div>
         </div>
       </div>
     </div>

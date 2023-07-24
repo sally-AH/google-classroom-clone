@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .navbar {
   background: white;
   border-bottom: 0.0625rem solid #e0e0e0;
@@ -323,10 +324,10 @@ justify-content: space-between;
 .create_class_popup{
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   background-color: #00000079;
   z-index: 3;
@@ -349,7 +350,7 @@ justify-content: space-between;
   font-weight: 600;
   letter-spacing: .1px;
   line-height: 24px;
-  color: #302f2fde;;
+  color: #302f2fde;
 }
 
 .class_popup_container input{
