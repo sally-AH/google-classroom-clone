@@ -5,7 +5,8 @@ header("Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type
 $response = array();
 $json_data = file_get_contents('php://input');
 $data = json_decode($json_data, true);
-$receivedemail = $data['email'];
+$receivedemail = $data['user_email'];
+$receivedtoken=$data['user_token'];
 //Declare variable
 // $email = $_POST[$receivedemail];
 // $subject = $_POST["subject"];
@@ -43,7 +44,7 @@ try {
     //Content
     $mail->isHTML(true); //Set email format to HTML
     $mail->Subject = "this is a test email";
-    $mail->Body    = "your new password is : DoFAJmasa@891";
+    $mail->Body    = "your new password is : ".$receivedtoken;
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
