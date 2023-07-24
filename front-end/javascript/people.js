@@ -1,3 +1,30 @@
+const people = [
+  {
+    id: 1,
+    teacherName: "Teacher name",
+    teacherImage: "/front-end/images/3177440.png",
+    role: "teacher",
+  },
+  {
+    id: 2,
+    studentName: "Student name",
+    studentImage: "/front-end/images/3177440.png",
+    role: "student",
+  },
+  {
+    id: 3,
+    teacherName: "Another teacher",
+    teacherImage: "/front-end/images/3177440.png",
+    role: "teacher",
+  },
+  {
+    id: 4,
+    studentName: "Another student",
+    studentImage: "/front-end/images/3177440.png",
+    role: "student",
+  },
+];
+
 const teacherUsers = [];
 const studentUsers = [];
 
@@ -47,3 +74,5 @@ async function get() {
 }
 
 get();
+
+
