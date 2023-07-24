@@ -111,7 +111,7 @@
                         </div>
                     </div>
                     <div class="buttons">
-                        <button class="upload"> <img src="/front-end/images/plus.png"> Add or create</button>
+                        <button id="uploadbtn" class="upload"> <img src="/front-end/images/plus.png"> Add or create</button>
                         <button class="submit">Turn in</button>
                     </div>
                 </div>
@@ -124,6 +124,26 @@
                 </div>
             </div>
         </div>
+
+        <div id="upload_files_popup" class="upload_files_popup">
+        <div class="upload_files_container">
+            <div class="container">
+              <div class="container_title">
+                <img>
+                <div class="title">Insert files using Google Drive</div>
+              </div>
+              <img src="/front-end/images/close.png" alt="">
+            </div>
+            <input type="text" placeholder="Class name (required)">
+            <input type="text" placeholder="Section">
+            <input type="text" placeholder="Subject">
+            <input type="text" placeholder="Room">
+            <div class="container_footer">
+              <div id="cancel" class="footer_btn">Cancel</div>
+              <div id="create" class="footer_btn">Create</div>
+            </div>
+        </div>
+      </div>
     </div>
 </body>
 </html>
