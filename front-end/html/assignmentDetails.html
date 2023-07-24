@@ -107,7 +107,7 @@
                             <p>file name</p>
                         </div>
                         <div class="Uploaded_file_right">
-                            <img src="/front-end/images/close.png">
+                            <img class="closebtn" src="/front-end/images/close.png">
                         </div>
                     </div>
                     <div class="buttons">
@@ -138,7 +138,7 @@
               <div class="nav_item">
                 <p>Recent</p>
               </div>
-              <div class="nav_item">
+              <div class="nav_item item_selected">
                 <p>Upload</p>
               </div>
               <div class="nav_item">
@@ -154,19 +154,13 @@
             <div class="display_files">
               <img src="https://ssl.gstatic.com/docs/picker/images/upload_background.png">
             </div>
-            <!-- <div class="container_footer">
-              <div id="cancel" class="footer_btn">Cancel</div>
-              <div id="create" class="footer_btn">Create</div>
-            </div> -->
-            <form id="upload_form" enctype="multipart/form-data">
-                <div class="form-group">
-                    <!-- <p id="input_title">choose file</p> -->
-                    <input type="file" name="upload_file[]" id="upload_file" multiple="multiple" class="form-control" hidden>
-                    <label class="upload_label" for="upload_file">Choose File</label>
-                </div>
-                <input type="hidden" name="upload_to" id="upload_to">
-                <input type="button" id="upload_button" class="form-control btn btn-info">
-            </form>
+            <div class="container_footer">
+              <!-- <div id="cancel" class="footer_btn">Cancel</div>
+              <div id="create" class="footer_btn">Create</div> -->
+              <input type="file" name="upload_file[]" id="upload_file" multiple="multiple" class="form-control" hidden>
+              <label class="upload_label" for="upload_file">Browse</label>
+              <p>or drag a file here</p>
+            </div>
         </div>
       </div>
     </div>
