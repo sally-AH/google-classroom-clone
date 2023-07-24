@@ -13,7 +13,8 @@ const line1 = document.getElementById("line_classwork");
     line1.style.display = 'none';
 
 function gotToPage(event){
-  window.location.href= `/front-end/html/${event.target.className}.html`;
+  const id  =window.location.search.split('=')[1]
+  window.location.href= `/front-end/html/${event.target.className}.html?id=${id}`;
 }
 
 /////////////////////////////////////////////
