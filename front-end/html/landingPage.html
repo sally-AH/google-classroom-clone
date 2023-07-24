@@ -31,7 +31,7 @@
         </div>
         <div>
           <span>
-            <button class="addSymbol">
+            <button id="addSymbol" class="addSymbol">
               <span >
                 <svg focusable="false" width="30" height="30" viewBox="0 0 24 24">
                   <path d="M20 13h-7v7h-2v-7H4v-2h7V4h2v7h7v2z"></path>
@@ -75,6 +75,27 @@
     
     <div class="classes">
 
+    </div>
+
+    <div id="popup" class="popup">
+      <div class="popup_container">
+        <div class="popup_btn"><p>Join class</p></div>
+        <div class="popup_btn"><p>Create class</p></div>
+      </div>
+    </div>
+
+    <div class="create_class_popup">
+      <div class="class_popup_container">
+        <div class="container_title">Create class</div>
+        <input type="text" placeholder="Class name (required)">
+        <input type="text" placeholder="Section">
+        <input type="text" placeholder="Subject">
+        <input type="text" placeholder="Room">
+        <div class="container_footer">
+          <div class="footer_btn">Cancel</div>
+          <div class="footer_btn">Create</div>
+        </div>
+      </div>
     </div>
     
     <script src="../javascript/landingPage.js"></script>
