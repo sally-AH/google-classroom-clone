@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".passbtn").addEventListener("click", async (e) => {
     jsdata = {
       user_email: email,
-      user_token: newpass.value
+      user_password: newpass.value
     }
     const jsonobject = JSON.stringify(jsdata)
 
