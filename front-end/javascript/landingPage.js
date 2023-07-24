@@ -137,9 +137,58 @@ classes = [
   },
 
 ]
+let responseData
+document.addEventListener("DOMContentLoaded" , async()=>{
+  const url = "http://localhost/google-classroom-clone/back-end/php/getClasses.php"
+  const requestBody= {
+    user_id : 1
+  }
+  const parsedBody = JSON.stringify(requestBody)
+  const response = await fetch(url , {
+    method:"POST",
+    body:parsedBody
+  })
+  const data = await response.json()
+  console.log(data)
+  responseData = data.data
+
+console.log(responseData)
+
+function formatDueDate(dateString) {
+  const date = new Date(dateString);
+  return `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
+}
+
+const groupedClasses = {};
+responseData.forEach((singleClass) => {
+  const classId = singleClass.class_id;
+  if (!groupedClasses[classId]) {
+    
+    groupedClasses[classId] = {
+      id: classId,
+      name: `${singleClass.class_code} | ${singleClass.class_subject}`,
+      instructor: 'Instructor Name',
+      image: singleClass.class_photo,
+      description: singleClass.class_description,
+      color: "green", 
+      assignments: [],
+    };
+  }
+
+  groupedClasses[classId].assignments.push({
+    name: singleClass.post_title,
+    dueDate: formatDueDate(singleClass.post_end_date),
+  });
+});
+
+console.log(groupedClasses)
+const classes = Object.values(groupedClasses);
+
+console.log(classes);
 
 const bodyContent = []
 const selectedPage = 0
+
 classes.forEach((studentClass, index) => {
   const { id, name, color, image, instructor, description, assignments } = studentClass
 
@@ -203,15 +252,12 @@ classes.forEach((studentClass, index) => {
  
 })
 
-console.log(bodyContent)
 const body = document.querySelector(".classes")
 body.innerHTML = bodyContent.join('')
 
 const heads = document.querySelectorAll('.header')
-console.log(heads)
 heads.forEach((head)=>{
   head.addEventListener('click' , (e)=>{
-    console.log(e.target.classList)
     if(e.target.classList[1] && e.target.classList[1]!=='desc'){
       window.location.href = `../html/stream.html?id=${e.target.classList[1]}`
     }else if(e.target.classList[1]==='desc'){
@@ -220,3 +266,4 @@ heads.forEach((head)=>{
   })
 })
 
+})

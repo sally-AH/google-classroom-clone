@@ -1,74 +1,3 @@
-posts = [
-  {
-        id: 1,
-        post_type: 'material',
-        name:" full stuff from stuff",
-        category:"Full Stack",
-        title: "Fetch/PHP Assignment Correction",
-        instructo: 'Khaled Faour',
-        posted_date: 'Yesterday',
-        text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
-        files:""
-  },
-
-  {
-        id: 2,
-        post_type: 'assignment',
-        category:"PHP",
-        name:" Google Classroom Clone",
-        due_date: "15 Dec, 10:00 PM",
-        text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
-        files:""
-  },
-  {
-        id: 3,
-        post_type: 'material',
-        category:"PHP",
-        name:"Log in Sign Up",
-        due_date: "12 Dec, 6:00 AM",
-        text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
-        files:""
-  },
-  {
-        id: 4,
-        post_type: 'assignment',
-        category:"SQL",
-        name:"Tables and relations",
-        due_date: "11 Jan, 11:00 PM",
-        text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
-        files:""
-  },
-  {
-        id: 5,
-        post_type: 'material',
-        category:"J",
-        name:"DOM Manipulation",
-        due_date: "26 Jul, 10:00 PM",
-        text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
-        files:""
-  },
-  {
-        id: 6,
-        post_type: 'material',
-        category:"",
-        name:"DOM Manipulation",
-        due_date: "25 Jul, 10:00 PM",
-        text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
-        files:""
-  },
-  {
-        id: 7,
-        post_type: 'material',
-        category:"",
-        name:"DOM Manipulation",
-        due_date: "26 Jul, 10:00 PM",
-        text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
-        files:""
-  },
-  
-
-]
-
 const categories = []
 
 document.addEventListener("DOMContentLoaded", async() => {
@@ -84,6 +13,7 @@ document.addEventListener("DOMContentLoaded", async() => {
   })
   const data = await response.json()
   posts = data
+  console.log(data)
   const ulElement = document.querySelector('.aside ul');
   const categories = [];
   
