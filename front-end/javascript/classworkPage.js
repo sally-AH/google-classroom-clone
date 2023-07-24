@@ -16,7 +16,7 @@ posts = [
         post_type: 'assignment',
         category:"PHP",
         name:" Google Classroom Clone",
-        due_date: "Due 15 Dec, 10:00 PM",
+        due_date: "15 Dec, 10:00 PM",
         text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
         files:""
   },
@@ -25,7 +25,7 @@ posts = [
         post_type: 'material',
         category:"PHP",
         name:"Log in Sign Up",
-        due_date: "Due 12 Dec, 6:00 AM",
+        due_date: "12 Dec, 6:00 AM",
         text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
         files:""
   },
@@ -34,16 +34,16 @@ posts = [
         post_type: 'assignment',
         category:"SQL",
         name:"Tables and relations",
-        due_date: "Due 11 Jan, 11:00 PM",
+        due_date: "11 Jan, 11:00 PM",
         text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
         files:""
   },
   {
         id: 5,
         post_type: 'material',
-        category:"Ja",
+        category:"J",
         name:"DOM Manipulation",
-        due_date: "Due 26 Jul, 10:00 PM",
+        due_date: "26 Jul, 10:00 PM",
         text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
         files:""
   },
@@ -52,7 +52,7 @@ posts = [
         post_type: 'material',
         category:"",
         name:"DOM Manipulation",
-        due_date: "Due 26 Jul, 10:00 PM",
+        due_date: "25 Jul, 10:00 PM",
         text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
         files:""
   },
@@ -61,7 +61,7 @@ posts = [
         post_type: 'material',
         category:"",
         name:"DOM Manipulation",
-        due_date: "Due 26 Jul, 10:00 PM",
+        due_date: "26 Jul, 10:00 PM",
         text_content:"asdjasdjkasd nasdkjasdnadbsmnasbd adbnasbdn abndabs nban bnab bas",
         files:""
   },
@@ -71,7 +71,19 @@ posts = [
 
 const categories = []
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async() => {
+  const id = window.location.search.split('=')[1]
+  const url = "http://localhost/google-classroom-clone/back-end/php/getAssignments.php"
+  const body = {
+    id
+  }
+  const parsedBody = JSON.stringify(body)
+  const response = await fetch(url , {
+    method:"POST",
+    body:parsedBody
+  })
+  const data = await response.json()
+  posts = data
   const ulElement = document.querySelector('.aside ul');
   const categories = [];
   
@@ -90,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const joinedName = categories[i].trim().replace(/\s/g, '');
     document.querySelector(".categories").innerHTML += `
       <li class="category ${joinedName}">
-        <div>
+        <div class="catHeadings">
           <h1 class="title">${categories[i]}</h1>
           <div class="line cat">1</div>
         </div>
@@ -101,11 +113,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const joinedName = posts[i].category.trim().replace(/\s/g, '');
     const elementsWithCategory = document.querySelectorAll(`[class*="${joinedName}"]`)
     for(let j=0 ; j<elementsWithCategory.length ; j++){
+      const assDueDate = posts[i].due_date ? "Due "+posts[i].due_date.split(',')[0] :"Posted "+  posts[i].posted_date.split(',')[0] 
       elementsWithCategory[j].innerHTML+=`
       <ul  class="assMat">
           <li>
+          
             <div>
+            
               <div class="singlePost  post${posts[i].id}">
+              <div class = "ContainingPost">
                 ${posts[i].post_type === "assignment"? `<div class="logoContainer">
                 <svg
                 focusable="false"
@@ -124,26 +140,34 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div>
                   <h4 class="assMat text">${posts[i].name}</h4>
                 </div>
-                
+                </div>
+                <div class = "dueDate">${assDueDate}</div>
               </div>
-              <div class="accordion-content  post${posts[i].id} ">
               
-              <div class="innerAccordion">
-              <p>${posts[i].text_content}</p>
+              <div class="accordion-content  post${posts[i].id} ">
+                <div class="innerAccordion">
+                  <p>${posts[i].text_content}</p>
+                  <div class="flex-box">
+                
+                  </div>
+                </div>
+                <div class="footer">
+                  <h3>View material</h3>
                 </div>
               </div>
             </div>
           </li>
         </ul>`
     }
-    console.log(elementsWithCategory);
     if (!posts[i].category) {
       const noCategUl = document.querySelector('.assMat');
       if (noCategUl) {
+        const assDueDate = posts[i].due_date ? "Due "+posts[i].due_date.split(',')[0] :"Posted "+  posts[i].posted_date.split(',')[0] 
         noCategUl.innerHTML += `
         <li>
               <div class="">
                 <div class="singlePost  post${posts[i].id}">
+                <div class = "ContainingPost">
                   <div>
                   ${posts[i].post_type === "assignment"? `<div class="logoContainer">
                   <svg
@@ -163,12 +187,20 @@ document.addEventListener("DOMContentLoaded", () => {
                   <div>
                     <h4 class="assMat text">${posts[i].name}</h4>
                   </div>  
+                </div> 
+                <div class = "dueDate">${assDueDate}</div> 
                 </div>  
-              </div>
-              <div class="accordion-content  post${posts[i].id}">
-              <p>${posts[i].text_content}</p>
-              <div class="flex-box">
                 
+              </div>
+              <div class="accordion-content  post${posts[i].id} ">
+                <div class="innerAccordion">
+                  <p>${posts[i].text_content}</p>
+                  <div class="flex-box">
+                
+                  </div>
+                </div>
+                <div class="footer">
+                  <h3>View material</h3>
                 </div>
               </div>
             </div>
@@ -185,6 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const postId = e.currentTarget.classList[1];
       const accordionContent = document.querySelector(`.accordion-content.${postId}`)
       accordionContent.classList.toggle("active");
+      post.classList.toggle("active");
     });
   });
 
