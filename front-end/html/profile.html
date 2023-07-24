@@ -62,19 +62,21 @@
                         
                     </div>
                     <div class="body">
-                        <input class="input_body" type="text" placeholder="First name">
-                        <input class="input_body" type="text" placeholder="Last name">
-                        <input class="input_body" type="email" placeholder="Email">
-                        <input class="input_body" type="number" placeholder="Phone number">
-                        <input class="input_body" type="date">
+                        <input class="input_body" id="firstName" type="text" placeholder="First name">
+                        <input class="input_body" id="lastName" type="text" placeholder="Last name">
+                        <input class="input_body" id="phoneNumber" type="number" placeholder="Phone number">
+                        <input class="input_body" id="date" type="date">
+                        <input class="input_body" id="password" type="password" placeholder="Password">
+                        <a href="verification.html">Forget password? reset</a>
                         <div class="btn_container">
-                            <button>Edit</button>
+                            <button id="editBtn" onclick="editProfile()">Edit</button>
                         </div>
                     </div>
 
                 </div>
             </div>
         </div>
+        <script src="/front-end/javascript/profile.js"></script>
     </div>
 </body>
 

@@ -8,9 +8,11 @@ html,
 body {
     width: 100%;
     height: 100vh;
+    background-color: #F8F9FA;
 }
-.navbar{
-    font-family: "Google Sans",Roboto,Arial,sans-serif;
+
+.navbar {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
     font-size: 16px;
     font-weight: 500;
     letter-spacing: .1px;
@@ -21,68 +23,68 @@ body {
     border-bottom: #dadce0 1px solid;
 }
 
-.nav_content{
+.nav_content {
     width: 100%;
     align-items: center;
     display: flex;
 }
 
-.left_nav{
+.left_nav {
     display: flex;
     align-self: center;
     margin: 1rem;
 }
 
-.left_nav .exit{
+.left_nav .exit {
     color: #5f6368;
     fill: #5f6368;
 }
 
-.mid_nav{
+.mid_nav {
     display: flex;
     width: 100%;
     align-items: center;
     align-content: center;
     flex-grow: 1;
-    margin-left: 0.5rem ;
+    margin-left: 0.5rem;
     margin-bottom: 0.875rem;
     margin-top: 0.875rem;
 }
 
-.mid1{
+.mid1 {
     background-color: #FEEFE3;
     border-radius: 50%;
     flex-shrink: 0;
     font-size: 1rem;
     display: flex;
     justify-content: center;
-    fill: rgb(232,113,10);
+    fill: rgb(232, 113, 10);
     padding: 0.45rem;
 }
-.mid_nav .mid2{
-    font-family: "Google Sans",Roboto,Arial,sans-serif;
+
+.mid_nav .mid2 {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
     line-height: 1.75rem;
     font-size: 1.375rem;
     letter-spacing: 0;
     font-weight: 400;
-    color: rgb(95,99,104);
+    color: rgb(95, 99, 104);
     flex-grow: 1;
     min-width: 0;
     padding: 0.25rem;
     padding-left: 0.75rem;
-
 }
 
-.right_nav{
-    display: flex; 
+.right_nav {
+    display: flex;
     justify-content: end;
     margin: 0 16px;
     width: 100%;
     height: 3rem;
-  
 }
-.right1{
-    font-family: "Google Sans",Roboto,Arial,sans-serif;
+
+.right1 {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
     font-size: 16px;
     border-radius: 6px;
     border-bottom-right-radius: 0;
@@ -90,56 +92,200 @@ body {
     border: 2px solid #dadce0;
     width: calc(20% + 4px);
     background-color: #dadce0;
-    
 }
-.right2{
-    background-color: rgb(194,100,1);
+
+.right2 {
+    background-color: rgb(194, 100, 1);
     display: flex;
     min-width: 2.125rem;
     border-radius: 5px;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    height: 3rem;  
-}
-.body_container{
-    padding: 16px;
-    width: 100%;
-}
-.flex_box{
-    display: flex;
-    height: 100%;
-    
-}
-.body_left{
-    background-color: #F1F3F4;
-    
+    height: 3rem;
 }
 
-.bodyLeft_content1{
+.body_container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #F8F9FA;
+}
+
+.flex_box {
+    display: flex;
+    height: 100%;
+}
+
+.body_left{
+    padding: 2rem;
+    height: 100%;
+}
+.bodyLeft_content1 {
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
     border: 0.0625rem solid #dadce0;
     border-radius: 0.5rem;
     padding: 1.5rem;
     background-color: white;
-
 }
 
-.left_content1{
+.left_content1 {
     display: flex;
     flex-grow: 1;
     margin-bottom: 1rem;
 }
-s
-.content_title{
-    font-family: Roboto,Arial,sans-serif;
+
+.left_content2 input {
+    display: flex;
+    flex-direction: column;
+    height: 7rem;
+}
+
+.content_title {
+    font-family: Roboto, Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
     color: #5f6368;
-    background-color: #F1F3F4;
+    background-color: #F8F9FA;
     width: 60rem;
     padding: 1.5rem;
     border: none;
     border-bottom: solid 1px;
+}
 
+.left_content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0.25rem;
+    max-height: 13.75rem;
+    padding-bottom: 1rem;
+    padding-right: 1.5rem;
+    column-gap: 0.875rem;
+    cursor: pointer;
+}
+
+.left_content2 textarea{
+    border-bottom: none;
+    background-color: #F8F9FA;
+}
+
+.left_content3{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.25rem;
+    max-height: 13.75rem;
+    padding-bottom: 1rem;
+    padding-right: 1.5rem;
+    column-gap: 0.875rem;
+    cursor: pointer;
+}
+
+.pageimages {
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid #EDEEF1;
+    border-radius: 30px;
+    padding:5px;
+}
+
+.bodyLeft_content2{
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border: 0.0625rem solid #dadce0;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    background-color: white;
+}
+.button_section{
+    width: 100%;
+
+    background-color: #F8F9FA;
+    height: 2rem;
+    padding: 7px 0px;
+}
+
+.container_button{
+    display: flex;
+    column-gap: 1rem;
+    height: 40px;
+    background-color:#F8F9FA ;
+    padding: 2px 6px;
+}
+
+.t1{
+    letter-spacing: .01785714em;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    margin-bottom: 0.875rem;
+    max-width: 4.625rem;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.attach{
+    letter-spacing: .01785714em;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: #3c4043;
+}
+
+.body_right{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-left: 0.0625rem solid #dadce0;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    row-gap: 1rem;
+}
+
+.box_wrapper{
+    display: flex;
+    column-gap: 1rem;
+
+}
+
+.boxes{
+    width: 150px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#F8F9FA;
+    letter-spacing: .01428571em;
+    font-family: Arial,sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    color: #61656A;
+    border-radius: 4px;
+    
+}
+.boxes:hover{
+    background-color:#EAEAEB ;
+}
+
+.body_right_row{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.t2{
+    color: #61656A;
+}
+.box_wrapper1{
+    width: 100%;
+}
+.v1{
+    width: 100%;
+    justify-content: start;
+    padding-left: 20px;
 }
