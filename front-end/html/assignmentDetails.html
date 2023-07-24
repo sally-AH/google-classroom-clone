@@ -154,10 +154,19 @@
             <div class="display_files">
               <img src="https://ssl.gstatic.com/docs/picker/images/upload_background.png">
             </div>
-            <div class="container_footer">
+            <!-- <div class="container_footer">
               <div id="cancel" class="footer_btn">Cancel</div>
               <div id="create" class="footer_btn">Create</div>
-            </div>
+            </div> -->
+            <form id="upload_form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <!-- <p id="input_title">choose file</p> -->
+                    <input type="file" name="upload_file[]" id="upload_file" multiple="multiple" class="form-control" hidden>
+                    <label class="upload_label" for="upload_file">Choose File</label>
+                </div>
+                <input type="hidden" name="upload_to" id="upload_to">
+                <input type="button" id="upload_button" class="form-control btn btn-info">
+            </form>
         </div>
       </div>
     </div>

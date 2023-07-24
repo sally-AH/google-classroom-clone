@@ -422,12 +422,10 @@ html, body{
   padding: 20px;
   display: flex;
   flex-direction: column;
-  /* row-gap: 1rem; */
   background-color: #fff;
 }
 
 .container{
-    /* height: 70px; */
     display: flex;
     justify-content: space-between;
 }
@@ -465,7 +463,6 @@ html, body{
 }
 
 .nav_item{
-    /* height: 100%; */
     display: flex;
     padding: 0 24px;
     align-items: center;
@@ -501,11 +498,11 @@ html, body{
     background-repeat: no-repeat;
 }
 
-.footer_btn{
+/* .footer_btn{
   padding: 5px 10px;
   border-radius: 4px;
 }
 
 .footer_btn:hover{
   background: #ecebeb;
-}
+} */
