@@ -1,10 +1,9 @@
-
 const teacherUsers = [];
 const studentUsers = [];
 
 async function get() {
   try {
-    const response = await fetch("http://localhost/google-classroom-clone/php/people.php", {
+    const response = await fetch("http://localhost/google-classroom-clone/back-end/php/people.php", {
       method: "POST",
       body: JSON.stringify({ class_id: 1 }) 
     });
