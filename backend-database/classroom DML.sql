@@ -26,11 +26,11 @@ delete from user_actions;
 /*==============================================================*/
 /* Table: users                                    			    */
 /*==============================================================*/
-insert into users (user_email, user_password, f_name, l_name, phone_number, dob, photo) values
-	('l_l@gmail.com', '123', 'Luffy', 'OnePiece', '12345678', '2000-01-01', null),
-	('n_n@gmail.com', '123', 'Naruto', 'Uzumaki', '12345678', '2000-01-01', null),
-	('e_e@gmail.com', '123', 'Eren', 'Yeager', '12345678', '2000-01-01', null),
-	('k_k@gmail.com', '123', 'Light', 'Yagami', '12345678', '2000-01-01', null);
+insert into users (user_email, user_password, f_name, l_name, phone_number, dob, photo, token) values
+	('l_l@gmail.com', '123', 'Luffy', 'OnePiece', '12345678', '2000-01-01', null, null),
+	('n_n@gmail.com', '123', 'Naruto', 'Uzumaki', '12345678', '2000-01-01', null, null),
+	('e_e@gmail.com', '123', 'Eren', 'Yeager', '12345678', '2000-01-01', null, null),
+	('k_k@gmail.com', '123', 'Light', 'Yagami', '12345678', '2000-01-01', null, null);
 
 /*==============================================================*/
 /* Table: user_roles                                    		*/

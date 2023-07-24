@@ -152,6 +152,7 @@ create table users
    phone_number         varchar(255) not null,
    dob                  date not null,
    photo                varchar(255),
+   token                varchar(255),
    primary key (user_id),
    unique key (user_email)
 )
