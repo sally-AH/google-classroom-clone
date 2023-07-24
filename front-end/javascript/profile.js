@@ -8,9 +8,9 @@
             const phoneNumber = document.getElementById('phoneNumber').value;
             const date = document.getElementById('date').value;
 
-            const url = `api/${role}/`;
+            const url = ``;
             const response = await fetch(url, {
-                method: 'PUT',
+                method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
