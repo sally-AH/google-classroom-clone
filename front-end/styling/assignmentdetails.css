@@ -417,32 +417,61 @@ html, body{
 }
 
 .upload_files_container{
-  width: 950px;
+  width: 800px;
   height: 500px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
-  border-radius: 8px;
   background-color: #fff;
 }
 
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
 .container_title{
+    display: flex;
+    align-items: center;
+}
+
+.drive-logo{
+    width: 70px;
+    height: 35px;
+}
+
+.closebtn{
+    width: 30px;
+    height: 30px;
+}
+
+.title{
   font-family: "Google Sans",Roboto,Arial,sans-serif;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: .1px;
-  line-height: 24px;
+  line-height: 22px;
   color: #302f2fde;
 }
 
-.class_popup_container input{
-  width: 100%;
-  height: 53px;
-  padding-left: 20px;
-  border: none;
-  border-bottom: 1px solid black;
-  background-color: #e0e0e0b9;
+.container_navigation{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    border-bottom: .7px solid rgb(172, 172, 172);
+}
+
+.nav_item{
+    display: flex;
+    padding: 0 24px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nav_item:hover{
+    background-color: #f1f1f1;
 }
 
 .container_footer{
@@ -451,6 +480,21 @@ html, body{
   column-gap: 1rem;
   margin-top: 30px;
   justify-content: flex-end;
+}
+
+.display_files{
+    width: 100%;
+    height: 100%;
+    background-color: #e6baba;
+}
+
+.display_files img{
+    width: 400px;
+    height: 70%;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: +150px;
 }
 
 .footer_btn{
