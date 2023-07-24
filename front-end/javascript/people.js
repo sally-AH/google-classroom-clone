@@ -28,35 +28,44 @@ const people = [
   const teacherUsers = [];
   const studentUsers = [];
   
-  people.forEach((element) => {
-    const { id, teacherName, teacherImage, role } = element;
-    const { id: studentId, studentName, studentImage } = element;
+  async function getpeople() {
+    try {
+      const response = await fetch(""); 
+      const people = await response.json();
+      
+      people.forEach((element) => {
+        const { id, teacherName, teacherImage, role } = element;
+        const { id: studentId, studentName, studentImage } = element;
   
-    if (role === "teacher") {
-      teacherUsers.push(`
-        <div class="container1" id="${id}">
-          <img src="${teacherImage}" alt="Teacher image">
-          <div>
-            <p class="TeacherName">${teacherName}</p>
-          </div>
-        </div>
-      `);
-    } else if (role === "student") {
-      studentUsers.push(`
-        <div class="container2" id="${studentId}">
-          <img src="${studentImage}" alt="Student image">
-          <div>
-            <p class="studentName">${studentName}</p>
-          </div>
-        </div>
-      `);
+        if (role === "teacher") {
+          teacherUsers.push(`
+            <div class="container1" id="${id}">
+              <img src="${teacherImage}" alt="Teacher image">
+              <div>
+                <p class="TeacherName">${teacherName}</p>
+              </div>
+            </div>
+          `);
+        } else if (role === "student") {
+          studentUsers.push(`
+            <div class="container2" id="${studentId}">
+              <img src="${studentImage}" alt="Student image">
+              <div>
+                <p class="studentName">${studentName}</p>
+              </div>
+            </div>
+          `);
+        }
+      });
+
+      const teacherSection = document.querySelector(".upper_part");
+      teacherSection.innerHTML = teacherUsers.join("");
+  
+      const studentSection = document.querySelector(".down_part");
+      studentSection.innerHTML = studentUsers.join("");
+    } catch (error) {
+      console.error("Error fetching data:", error);
     }
-  });
+  }
   
-  
-  const teacherSection = document.querySelector(".upper_part");
-  teacherSection.innerHTML = teacherUsers.join("");
-  
-  const studentSection = document.querySelector(".down_part");
-  studentSection.innerHTML = studentUsers.join("");
-  
+  getpeople();
