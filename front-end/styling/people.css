@@ -121,6 +121,10 @@ body {
     padding: 0 24px;
 }
 
+.link:hover{
+    background-color: #F1F3F4;
+}
+
 .body_container {
     margin: 0 auto;
     max-width: 47.5rem;
