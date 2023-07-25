@@ -3,10 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const profileImage = document.getElementById('profileImage');
     const fileInput = document.getElementById('fileInput');
   
-    profileImage.addEventListener('click', () => {
-      fileInput.click(); 
-    });
-  
     fileInput.addEventListener('change', () => {
       const selectedFile = fileInput.files[0];
       if (selectedFile) {
