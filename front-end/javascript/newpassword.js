@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     var jsonresult = await result.json()
-    console.log(jsonresult['status'])
+    location.replace("/index.html");
 
 
 
