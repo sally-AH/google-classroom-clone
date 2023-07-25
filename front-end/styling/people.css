@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.navbar {
+    background: white;
+    border-bottom: 0.0625rem solid #e0e0e0;
+    flex-shrink: 0;
+    line-height: 1.7em;
+    position: fixed;
+    top: 0;
+    transform: none;
+    width: 100%;
+    z-index: 986;
+}
+
+.navContent {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.navLeft {
+    min-width: 0;
+    flex: 1;
+}
+
+.right_side {
+    display: flex;
+    width: 300px;
+    min-width: 100px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navLogo {
+    height: 4rem;
+    padding-left: 1rem;
+    align-items: center;
+    display: flex;
+}
+
+.hamburger {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    fill: currentColor;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    z-index: 0;
+    overflow: visible;
+    margin-left: 20px;
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    margin-right: 15px;
+}
+
+.navLogo h1 {
+    color: #3c4043;
+    font-family: "Google Sans", "Roboto", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1rem;
+    top: -0.375rem;
+    left: -0.3rem;
+    font-weight: 600;
+}
+
+.classroomText {
+    font-size: 12px;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1rem;
+    letter-spacing: .025em;
+    color: #5f6368;
+}
+
+.squareIcon {
+    width: 30px;
+    height: 30px;
+}
+
+.icon {
+    border-radius: 50%;
+    margin: 20px;
+    margin: 0 30px;
+    height: 45px;
+    width: 45px;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    min-width: 0;
+}
+
+.stream_router {
+    height: 100%;
+    min-width: fit-content;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    padding: 0 20px;
+}
+
+.link {
+    height: 100%;
+    padding: 0 24px;
+}
+
+.link:hover{
+    background-color: #F1F3F4;
+}
+
+.body_container {
+    margin: 0 auto;
+    max-width: 47.5rem;
+    padding: 1.5rem 1.5rem;
+    padding: 6rem 11%;
+
+}
+
+.section_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+.title h1 {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    color: #202124;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+    border-bottom: 1px solid rgb(95, 99, 104);
+}
+
+.title {
+    margin: 1rem;
+
+}
+
+.title p{
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: #3c4043;
+}
+.container1 {
+    display: flex;
+    align-items: center;
+    padding: 0.2rem;
+    column-gap: 0.5rem;
+    border-bottom: 0.0625rem solid rgb(218, 220, 224);
+
+}
+
+.container1 p {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: #3c4043;
+}
+
+.container1 img {
+    max-height: 60px;
+    max-width: 60px;
+    flex: 0 0 2.5rem;
+    padding: 0 0.5rem;
+    text-align: center;
+
+}
+
+.upper_part{
+    margin-bottom: 3rem;
+}
+.container2 {
+    display: flex;
+    align-items: center;
+    padding: 0.2rem;
+    column-gap: 0.5rem;
+    border-bottom: 0.0625rem solid rgb(218, 220, 224);
+
+}
+
+.container2 p {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: #3c4043;
+}
+
+.container2 img {
+    max-height: 60px;
+    max-width: 60px;
+    flex: 0 0 2.5rem;
+    padding: 0 0.5rem;
+    text-align: center;
+}
