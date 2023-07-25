@@ -18,23 +18,14 @@ use classroom_db;
 /* Drop all the tables	                                        */
 /*==============================================================*/
 drop table if exists class_rooms;
-
 drop table if exists class_rooms_posts;
-
 drop table if exists people;
-
 drop table if exists posts;
-
 drop table if exists post_types;
-
 drop table if exists responses;
-
 drop table if exists response_types;
-
 drop table if exists users;
-
 drop table if exists user_actions;
-
 drop table if exists user_roles;
 
 /*==============================================================*/
@@ -44,7 +35,7 @@ create table class_rooms
 (
    class_id             int auto_increment not null,
    class_code           varchar(255) not null,
-   class_link           varchar(255) not null,
+   class_link           varchar(255),
    class_name           varchar(255) not null,
    class_section        varchar(255),
    class_subject        varchar(255),
@@ -97,7 +88,8 @@ create table posts
    post_body            varchar(1024),
    post_attachment      varchar(255),
    post_grade           float,
-   primary key (post_id)
+   primary key (post_id),
+   unique key (post_title)
 )
 Engine = innodb;
 
@@ -152,6 +144,7 @@ create table users
    phone_number         varchar(255) not null,
    dob                  date not null,
    photo                varchar(255),
+   token                varchar(255),
    primary key (user_id),
    unique key (user_email)
 )
@@ -213,5 +206,4 @@ alter table user_actions add constraint fk_user_actions2 foreign key (response_i
 
 alter table user_actions add constraint fk_user_actions3 foreign key (post_id)
       references posts (post_id) on delete restrict on update restrict;
-
 
