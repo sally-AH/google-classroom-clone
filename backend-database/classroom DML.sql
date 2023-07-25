@@ -27,10 +27,11 @@ delete from user_actions;
 /* Table: users                                    			    */
 /*==============================================================*/
 insert into users (user_email, user_password, f_name, l_name, phone_number, dob, photo, token) values
-	('l_l@gmail.com', '123', 'Luffy', 'OnePiece', '12345678', '2000-01-01', null, null),
-	('n_n@gmail.com', '123', 'Naruto', 'Uzumaki', '12345678', '2000-01-01', null, null),
-	('e_e@gmail.com', '123', 'Eren', 'Yeager', '12345678', '2000-01-01', null, null),
-	('k_k@gmail.com', '123', 'Light', 'Yagami', '12345678', '2000-01-01', null, null);
+	('s_s@gmail.com', '123', 'Sally', 'Sally', '12345678', '2000-01-01', null),
+	('a_a@gmail.com', '123', 'Ahmad', 'Ahmad', '12345678', '2000-01-01', null, null),
+	('d_d@gmail.com', '123', 'Dima', 'Dima', '12345678', '2000-01-01', null, null),
+	('k_k@gmail.com', '123', 'Kamran', 'Kamran', '12345678', '2000-01-01', null, null),
+	('r_r@gmail.com', '123', 'Rami', 'Rami', '12345678', '2000-01-01', null, null);
 
 /*==============================================================*/
 /* Table: user_roles                                    		*/
@@ -76,6 +77,7 @@ insert into people (user_role_id, class_id, user_id) values
 	(2, 1, 2),
 	(3, 1, 3),
 	(3, 1, 4),
+	(3, 1, 5),
 
     (1, 2, 3),
 	(2, 2, 1),
@@ -115,7 +117,7 @@ insert into class_rooms_posts (class_id, post_id) values
 /* Table: responses                                    			*/
 /*==============================================================*/
 insert into responses (response_type_id, file, comment, mark) values
-	(1, 'https://localhost/classroomclone/f/sol-1', null, null),
+	(1, 'https://localhost/classroomclone/f/sol-1', null, 20),
 	(1, 'https://localhost/classroomclone/f/sol-2', null, null);
 
 /*==============================================================*/
