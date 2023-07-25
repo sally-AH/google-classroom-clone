@@ -31,7 +31,7 @@ body{
   
     justify-content: space-between;
 
-  min-width: 40vw;
+  min-width: 46vw;
   }
 
   .navLogo{
@@ -110,15 +110,17 @@ body{
 
   .icon{
     border-radius: 50%;
-    margin: 20px;
-    margin:0 30px;
-    height: 45px;
-    width: 45px;
+    margin-right:80px;
+    margin-left:30px;
+    margin-top:3px;
+    height: 40px;
+    width: 40px;
   }
 
   .navContainer {
     display: flex;
-flex: 1;
+    flex: 1;
+    width: 120vw;
  }
 
   .streamName h3{
@@ -161,7 +163,13 @@ border:none;
 background-color: transparent;
 font-size: 15px;
 font-weight: 600;
-color: #5f6368;
+color:black;
+padding: 10px;
+}
+.navButton:hover{
+cursor: pointer;
+background-color: gainsboro;
+
 }
 
 .line.active{

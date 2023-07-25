@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async() => {
   const id = window.location.search.split('=')[1]
   const url = "http://localhost/google-classroom-clone/back-end/php/getAssignments.php"
   const body = {
-    id
+    id:1
   }
   const parsedBody = JSON.stringify(body)
   const response = await fetch(url , {
@@ -13,11 +13,15 @@ document.addEventListener("DOMContentLoaded", async() => {
   })
   const data = await response.json()
   posts = data
-  // console.log(data)
+  console.log(data)
   const ulElement = document.querySelector('.aside ul');
   const categories = [];
-  
-
+  const streamButton = document.querySelector(".stream").addEventListener('click' , ()=>{
+    window.location.href = `stream.html?id=${id}`
+  })
+  const peopleButton = document.querySelector(".people").addEventListener('click' , ()=>{
+    window.location.href = `people.html?id=${id}`
+  })
   for (let i in posts) {
     if(!categories.includes(posts[i].category) && posts[i].category !== ""){
       categories.push(posts[i].category);
