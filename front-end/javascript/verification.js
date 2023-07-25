@@ -17,7 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     jsdata = {
       user_email: forgotemail.value,
-      user_token: newtoken
+      user_token: newtoken,
+      message: "Your Verification Code is : ",
+      subject: "Google Recovery Team"
     }
     const jsonobject = JSON.stringify(jsdata)
 
