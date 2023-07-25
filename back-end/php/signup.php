@@ -13,7 +13,7 @@ $password = $data['user_password'];
 $phonenumber = $data['phone_number'];
 $date = $data['dob'];
 $check_email = $mysqli->prepare('SELECT user_email FROM users WHERE user_email=?');
-$check_email->bind_param('is', $email);
+$check_email->bind_param('s', $email);
 $check_email->execute();
 $check_email->store_result();
 $email_exists = $check_email->num_rows();
@@ -23,7 +23,7 @@ if ($email_exists == 0) {
     $query->bind_param('ssssss', $first_name, $last_name, $email, $hashed_password, $phonenumber, $date);
     $query->execute();
     $response['status'] = "success";
-    $response['data'] = $user_id;
+    $response['message'] = "another message in success";
 } else {
     $response['status'] = "failed";
     $response['message'] = "another message in fail";
