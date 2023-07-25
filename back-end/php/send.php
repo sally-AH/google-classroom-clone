@@ -7,6 +7,8 @@ $json_data = file_get_contents('php://input');
 $data = json_decode($json_data, true);
 $receivedemail = $data['user_email'];
 $receivedtoken=$data['user_token'];
+$recevedmessage=$data['message'];
+$emailsubject=$data['subject'];
 //Declare variable
 // $email = $_POST[$receivedemail];
 // $subject = $_POST["subject"];
@@ -43,8 +45,8 @@ try {
 
     //Content
     $mail->isHTML(true); //Set email format to HTML
-    $mail->Subject = "Google Recovery Team ";
-    $mail->Body    = "Your Verification Code is : ".$receivedtoken;
+    $mail->Subject = " ".$emailsubject." ";
+    $mail->Body    = " ".$recevedmessage."  ".$receivedtoken;
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
