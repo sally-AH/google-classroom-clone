@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         dob: date.value
       }
       const jsonobject = JSON.stringify(jsdata)
-      const default_url = "https://localhost/google-classroom-clone-backend/back-end/php/signup.php"
+      const default_url = "http://localhost/google-classroom-clone/back-end/php/signup.php"
 
       async function register() {
 
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
         email.style.borderColor = "red";
       }
       else {
-        location.replace("../html/landingPage.html");
+        location.replace("/index.html");
 
       }
 
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
         loginemail.style.borderColor = "red";
       }
       else {
-        location.replace("../html/landingPage.html");
+        location.replace("index.html");
 
       }
 

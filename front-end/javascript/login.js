@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       }
       const jsonobject = JSON.stringify(jsdata)
-      const default_url = "http://localhost/google-classroom-clone-backend/back-end/php/signin.php"
+      const default_url = "http://localhost/google-classroom-clone/back-end/php/signin.php"
 
       async function login() {
 
@@ -55,7 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       }
       if (jsonresult["status"] == "logged in") {
-        location.replace("../html/landingPage.html");
+        localStorage.setItem("user_id" , jsonresult.data )
+        location.replace("../front-end/html/landingPage.html");
       }
 
     }

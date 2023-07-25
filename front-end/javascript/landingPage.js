@@ -196,9 +196,10 @@ classes = [
 ]
 let responseData
 document.addEventListener("DOMContentLoaded" , async()=>{
+  const id = JSON.parse(localStorage.getItem("user_id"))
   const url = "http://localhost/google-classroom-clone/back-end/php/getClasses.php"
   const requestBody= {
-    user_id : 1
+    user_id : id
   }
   const parsedBody = JSON.stringify(requestBody)
   const response = await fetch(url , {
