@@ -7,7 +7,13 @@ let btnClicked = false;
 let showModal = false;
 const module1=document.getElementById("add_teacher_pop");
 const module2=document.getElementById("add_student_pop");
-window.addEventListener('load',function(){
+document.addEventListener('DOMContentLoaded',function(){
+document.querySelector(".stream").addEventListener("click", ()=>{
+  window.location.href='stream.html'
+})
+document.querySelector(".classwork").addEventListener("click", ()=>{
+  window.location.href='classwork.html'
+})
 
   const invite_btn_teacher = document.getElementById("addTeacher");
   invite_btn_teacher.addEventListener("click",function(){
