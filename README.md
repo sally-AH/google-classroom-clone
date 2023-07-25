@@ -1,4 +1,3 @@
-# google-classroom-clone
 <h1 align="center">Google Classroom Repository</h1>
 
 <p></p>
@@ -34,24 +33,26 @@ If you have any questions or suggestions, feel free to reach out to me:
 
 </br>
 
-#team member 1: Sally Abd Al-Hafeez
+#team member 1: Majed Habli
 
 </br>
 
-📧 Email: [charbelallawi0@gmail.com](mailto:charbelallawi0@gmail.com)
-💼 LinkedIn: [Charbel Allawi](https://www.linkedin.com/in/charbelallawi/)
-📱 Phone number: [+96176968647](https://api.whatsapp.com/send?phone=96176968647)
+📧 Email: [majed.habli4@gmail.com](mailto:majed.habli4@gmail.com)
+💼 LinkedIn: [Majed habli](https://www.linkedin.com/in/majed-habli-b09a9027a/)
+📱 Phone number: [+96176127053](https://api.whatsapp.com/send?phone=96176127053 
 
 
 </br>
 
-#team Member 2: Charbel Allawi
+#team Member 2: Rama Khabbal
 
 </br>
 
-📧 Email: [charbelallawi0@gmail.com](mailto:charbelallawi0@gmail.com)
-💼 LinkedIn: [Charbel Allawi](https://www.linkedin.com/in/charbelallawi/)
-📱 Phone number: [+96176968647](https://api.whatsapp.com/send?phone=96176968647)
+📧 Email: [rama.khabbal@gmail.com 
+](mailto:rama.khabbal@gmail.com)
+💼 LinkedIn: [Rama Khabbal](www.linkedin.com/in/rama-kadah-el-habbal-332933149
+)
+📱 Phone number: [+96176775139 ](https://api.whatsapp.com/send?phone=96176775139
 
 </br>
 
