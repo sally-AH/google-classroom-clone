@@ -21,7 +21,7 @@ window.addEventListener('load',function(){
   });
 
   const create = document.getElementById("create");
-  cancel.addEventListener("click",function(){
+  create.addEventListener("click",function(){
     createClass();
   });
 
