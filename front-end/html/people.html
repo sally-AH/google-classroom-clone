@@ -31,13 +31,13 @@
           </div>
         </div>
         <div class="stream_router">
-          <div class="link">
+          <div class="link stream">
             <a>Stream</a>
           </div>
-          <div class="link">
+          <div class="link classwork">
             <a>Classwork</a>
           </div>
-          <div class="link">
+          <div class="link people">
             <a>People</a>
           </div>
         </div>
@@ -61,72 +61,74 @@
       </div>
     </nav>
     <div class="body_container">
-      <div class="section_container">
-        <div class="title">
-          <h1>Teachers</h1>
-          <div class="add">
-            <span>
-              <button id="addTeacher" class="addSymbol">
-                <span>
-                  <svg focusable="false" width="30" height="30" viewBox="0 0 24 24">
-                    <path d="M20 13h-7v7h-2v-7H4v-2h7V4h2v7h7v2z"></path>
-                  </svg>
-                </span>
-              </button>
-            </span>
+      <div class="wrapper">
+        <div class="section_container">
+          <div class="title">
+            <h1>Teachers</h1>
+            <div class="add">
+              <span>
+                <button id="addTeacher" class="addSymbol">
+                  <span>
+                    <svg focusable="false" width="30" height="30" viewBox="0 0 24 24">
+                      <path d="M20 13h-7v7h-2v-7H4v-2h7V4h2v7h7v2z"></path>
+                    </svg>
+                  </span>
+                </button>
+              </span>
+            </div>
+
+
+            <div id="add_teacher_pop" class="create_class_popup">
+              <div class="class_popup_container">
+                <div class="container_title">Invite teachers</div>
+                <input type="text" placeholder="Type a name or email address">
+                <div class="test"></div>
+                <div class="container_footer">
+                  <div id="cancel_tech" class="footer_btn">Cancel</div>
+                  <div id="invite_tech" class="footer_btn">Invite</div>
+                </div>
+              </div>
+            </div>
+
           </div>
+          <div class="upper_part">
+          </div>
+        </div>
+        <div class="section_container c2">
+          <div class="title">
+            <h1>Classmates</h1>
+            <div>
+              <span>
+                <button id="addStudent" class="addSymbol">
+                  <span>
+                    <svg focusable="false" width="30" height="30" viewBox="0 0 24 24">
+                      <path d="M20 13h-7v7h-2v-7H4v-2h7V4h2v7h7v2z"></path>
+                    </svg>
+                  </span>
+                </button>
+              </span>
+            </div>
 
 
-          <div id="add_teacher_pop" class="create_class_popup">
-            <div class="class_popup_container">
-              <div class="container_title">Invite teachers</div>
-              <input type="text" placeholder="Type a name or email address" id="studentemail">
-              <div class="test"></div>
-              <div class="container_footer">
-                <div id="cancel_tech" class="footer_btn">Cancel</div>
-                <div id="invite_tech" class="footer_btn teacherbtn">Invite</div>
+            <div id="add_student_pop" class="create_class_popup">
+              <div class="class_popup_container">
+                <div class="container_title">Invite students</div>
+                <input type="text" placeholder="Type a name or email address">
+                <div class="test"></div>
+                <div class="container_footer">
+                  <div id="cancel_std" class="footer_btn">Cancel</div>
+                  <div id="invite_std" class="footer_btn">Invite</div>
+                </div>
               </div>
             </div>
           </div>
-
-        </div>
-        <div class="upper_part">
-        </div>
-      </div>
-      <div class="section_container c2">
-        <div class="title">
-          <h1>Classmates</h1>
-          <div>
-            <span>
-              <button id="addStudent" class="addSymbol">
-                <span>
-                  <svg focusable="false" width="30" height="30" viewBox="0 0 24 24">
-                    <path d="M20 13h-7v7h-2v-7H4v-2h7V4h2v7h7v2z"></path>
-                  </svg>
-                </span>
-              </button>
-            </span>
+          <div class="down_part">
           </div>
-
-
-          <div id="add_student_pop" class="create_class_popup">
-            <div class="class_popup_container">
-              <div class="container_title">Invite students</div>
-              <input type="text" placeholder="Type a name or email address" id="studentemail">
-              <div class="test"></div>
-              <div class="container_footer">
-                <div id="cancel_std" class="footer_btn">Cancel</div>
-                <div id="invite_std" class="footer_btn studentbtn">Invite</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="down_part">
         </div>
       </div>
     </div>
     <script src="/front-end/javascript/people.js"></script>
-    <script src="/front-end/javascript/classroom_student_teacher.js"></script>
+
   </div>
 </body>
 

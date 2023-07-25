@@ -1,12 +1,7 @@
 
-
 document.addEventListener('DOMContentLoaded', () => {
     const profileImage = document.getElementById('profileImage');
     const fileInput = document.getElementById('fileInput');
-  
-    profileImage.addEventListener('click', () => {
-      fileInput.click(); 
-    });
   
     fileInput.addEventListener('change', () => {
       const selectedFile = fileInput.files[0];
@@ -18,6 +13,38 @@ document.addEventListener('DOMContentLoaded', () => {
         reader.readAsDataURL(selectedFile);
       }
     });
+  });
+  
+  window.addEventListener("load", async (event) => {
+    event.preventDefault();
+  
+    const dataToSend = {
+      user_id: 1
+    };
+  
+    try {
+      const response = await fetch('http://localhost/google-classroom-clone/back-end/php/displayProfile.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dataToSend),
+      });
+  
+      const data = await response.json();
+      console.log(data);
+      if (data["status"]) {
+        document.getElementById("firstName").value =data["data"]["f_name"];
+        document.getElementById("lastName").value =data["data"]["l_name"];
+        document.getElementById("phoneNumber").value =data["data"]["phone_number"];
+        document.getElementById("date").value =data["data"]["dob"];
+
+      } else {
+        document.getElementById("data").innerHTML = "nothing";
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
   });
   
 async function editProfile() {
