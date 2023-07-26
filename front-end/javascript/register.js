@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
         loginemail.style.borderColor = "red";
       }
       else {
-        location.replace("index.html");
+        location.replace("/index.html");
 
       }
 

@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded" , async()=>{
   const id = JSON.parse(localStorage.getItem("user_id"))
   const url = "http://localhost/google-classroom-clone/back-end/php/getClasses.php"
   const requestBody= {
-    user_id : id
+    user_id : 1
   }
   const parsedBody = JSON.stringify(requestBody)
   const response = await fetch(url , {
@@ -317,8 +317,12 @@ const heads = document.querySelectorAll('.header')
 heads.forEach((head)=>{
   head.addEventListener('click' , (e)=>{
     if(e.target.classList[1] && e.target.classList[1]!=='desc'){
+      localStorage.setItem("className" , e.target.parentElement.querySelector('h3').textContent)
+      localStorage.setItem("classDescription" , e.target.parentElement.querySelector('.desc').textContent)
       window.location.href = `../html/stream.html?id=${e.target.classList[1]}`
     }else if(e.target.classList[1]==='desc'){
+      localStorage.setItem("className" , e.target.parentElement.querySelector('h3').textContent)
+      localStorage.setItem("classDescription" , e.target.parentElement.querySelector('.desc').textContent)
       window.location.href = `../html/stream.html?id=${e.target.classList[2]}`
     }
   })

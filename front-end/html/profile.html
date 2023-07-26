@@ -57,17 +57,20 @@
         
                     
                         <div class="image_profile">
-                            <a href=""><img src="/front-end/images/3177440.png" alt=""></a>
-                        </div>
+                            <label for="fileInput">
+                              <img id="profileImage" src="/front-end/images/3177440.png" alt="Profile Image">
+                            </label>
+                            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                          </div>
                         
                     </div>
                     <div class="body">
                         <input class="input_body" id="firstName" type="text" placeholder="First name">
                         <input class="input_body" id="lastName" type="text" placeholder="Last name">
-                        <input class="input_body" id="phoneNumber" type="number" placeholder="Phone number">
+                        <input class="input_body" id="phoneNumber" type="text" placeholder="Phone number">
                         <input class="input_body" id="date" type="date">
-                        <input class="input_body" id="password" type="password" placeholder="Password">
                         <a href="verification.html">Forget password? reset</a>
+                        <p id="result"></p>
                         <div class="btn_container">
                             <button id="editBtn" onclick="editProfile()">Edit</button>
                         </div>

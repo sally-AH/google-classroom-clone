@@ -1,146 +1,155 @@
-body{
-  min-width:100vw ;
+body {
+  min-width: 100vw;
   overflow-x: hidden;
-}  
-  
-  .navbar {
-    background: white;
-    border-bottom: 0.0625rem solid #e0e0e0;
-    flex-shrink: 0;
-    line-height: 1.7em;
-    position: fixed;
-    top: 0;
-    transform: none;
-    width: 100%;
-    z-index: 986;
-    
-    
+}
 
-  }
-
-  .navContent {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    
-  }
-
-  .nav-left{
-    display: flex;
-  
-    justify-content: space-between;
-
-  min-width: 40vw;
-  }
-
-  .navLogo{
-    height: 4rem;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-  }
-  .hamburger{
-    border: none;
-    outline: none;
-    background-color: transparent;
-    fill: currentColor;
-    color: inherit;
-    text-decoration: none;
-    cursor: pointer;
-    user-select: none;
-    z-index: 0;
-    overflow: visible;
-    margin-left: 20px;
-    font-size: 24px;
-    width: 48px;
-    height: 48px;
-    padding: 12px;
-    margin-right: 15px;
-  }
-  .hamburger:hover{
-    border-radius: 50%;
-    background-color: ghostwhite;
-  }
-  .googleLogo {
-    padding-top: 0.625rem;
-  }
-  .classroomText {
-    color: #5f6368;
-    font-family: "Product Sans",Arial,Helvetica,sans-serif;
-    font-size: 1.4rem;
-    position: relative;
-    top: -0.375rem;
-    left:-0.3rem;
-    
-  }
-  .addSymbol{
-    border: none;
-    outline: none;
-    background-color: transparent;
-    fill: currentColor;
-    color: inherit;
-    text-decoration: none;
-    cursor: pointer;
-    user-select: none;
-    z-index: 0;
-    overflow: visible;
-    margin-left: 20px;
-    font-size: 24px;
-    width: 48px;
-    height: 48px;
-    padding: 12px;
-    margin-right: 15px;
-    margin-bottom:15px ;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-  .addSymbol:hover{
-    border-radius: 50%;
-    background-color: ghostwhite;
-  }
-
-  .squareIcon{
-    margin-top: 10px;
-    width: 30px;
-    height: 30px;
-  }
+.navbar {
+  background: white;
+  border-bottom: 0.0625rem solid #e0e0e0;
+  flex-shrink: 0;
+  line-height: 1.7em;
+  position: fixed;
+  top: 0;
+  transform: none;
+  width: 100%;
+  z-index: 986;
 
 
-  .icon{
-    border-radius: 50%;
-    margin: 20px;
-    margin:0 30px;
-    height: 45px;
-    width: 45px;
-  }
 
-  .navContainer {
-    display: flex;
-flex: 1;
- }
+}
 
-  .streamName h3{
+.navContent {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+
+}
+
+.nav-left {
+  display: flex;
+
+  justify-content: space-between;
+
+  min-width: 46vw;
+}
+
+.navLogo {
+  height: 4rem;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.hamburger {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  fill: currentColor;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  z-index: 0;
+  overflow: visible;
+  margin-left: 20px;
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  margin-right: 15px;
+}
+
+.hamburger:hover {
+  border-radius: 50%;
+  background-color: ghostwhite;
+}
+
+.googleLogo {
+  padding-top: 0.625rem;
+}
+
+.classroomText {
+  color: #5f6368;
+  font-family: "Product Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  position: relative;
+  top: -0.375rem;
+  left: -0.3rem;
+
+}
+
+.addSymbol {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  fill: currentColor;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  z-index: 0;
+  overflow: visible;
+  margin-left: 20px;
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.addSymbol:hover {
+  border-radius: 50%;
+  background-color: ghostwhite;
+}
+
+.squareIcon {
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+
+.icon {
+  border-radius: 50%;
+  margin-right: 80px;
+  margin-left: 30px;
+  margin-top: 3px;
+  height: 40px;
+  width: 40px;
+}
+
+.navContainer {
+  display: flex;
+  flex: 1;
+  width: 120vw;
+}
+
+.streamName h3 {
   margin: 0;
   margin-top: 10px;
   padding: 0;
   line-height: 15px;
   color: #5f6368;
   min-width: 500px;
-  }
-  .streamName p{
+}
+
+.streamName p {
   margin: 0;
   color: #5f6368;
   padding: 0;
-  }
-  
+}
+
 /* Add styles for the search bar */
 .midNav {
   display: flex;
   align-items: center;
-  min-width:300px; 
-  
+  min-width: 300px;
+
 }
 
 /* You can style the input element further if needed */
@@ -150,28 +159,36 @@ flex: 1;
   border-radius: 4px;
 
 }
-.rightNav{
+
+.rightNav {
   display: flex;
 }
 
-.navButton{
-line-height: 1rem;
-border: null;
-border:none;
-background-color: transparent;
-font-size: 15px;
-font-weight: 600;
-color: #5f6368;
+.navButton {
+  line-height: 1rem;
+  border: null;
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 600;
+  color: black;
+  padding: 10px;
 }
 
-.line.active{
+.navButton:hover {
+  cursor: pointer;
+  background-color: gainsboro;
+
+}
+
+.line.active {
   background-color: black;
   color: transparent;
   line-height: 2px;
 }
 
-.classwork{
-  margin-top:50px;
+.classwork {
+  margin-top: 50px;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -182,23 +199,26 @@ color: #5f6368;
 }
 
 
-.topicsContainer{
+.topicsContainer {
   width: 100px;
 }
-.topics{
-  list-style: none; 
+
+.topics {
+  list-style: none;
   font-weight: 600;
   padding: 15px;
   width: 130px;
   border-radius: 10px;
 }
-.topics:hover{
-  background-color:gainsboro;
+
+.topics:hover {
+  background-color: gainsboro;
   cursor: pointer;
 
 }
-.topic{
-  list-style: none; 
+
+.topic {
+  list-style: none;
   font-weight: 200;
   margin: 20px 0px;
   color: #5f6368;
@@ -208,51 +228,56 @@ color: #5f6368;
 
 
 }
-.topic:hover{
-  background-color:gainsboro;
+
+.topic:hover {
+  background-color: gainsboro;
   cursor: pointer;
 }
-.navAbove{
-  width:700px;
-display: flex;
-justify-content: space-between;
-margin-top:80px;
-margin-left: 33%;
-text-align: center;
+
+.navAbove {
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  margin-left: 33%;
+  text-align: center;
 }
 
-.navLeft{
+.navLeft {
   display: flex;
   gap: 20px;
   text-align: center;
 }
-.navText{
+
+.navText {
   margin-top: 50px;
 }
 
 
-.category{
+.category {
   list-style: none;
   margin-left: 0;
-  
-  
+
+
 
 }
-.line.cat{
+
+.line.cat {
   background-color: black;
   color: transparent;
   line-height: 1px;
   padding-right: 700px;
-  
+
 }
 
 
-.assignmentsLogo{
+.assignmentsLogo {
   height: 30px;
   width: 30px;
   margin-left: 5px;
 }
-.logoContainer{
+
+.logoContainer {
   height: 40px;
   width: 40px;
   background-color: gray;
@@ -261,10 +286,11 @@ text-align: center;
   justify-content: center;
   text-align: center;
   border-radius: 50%;
-  fill:aliceblue;
+  fill: aliceblue;
   margin-left: 12px;
 }
-.logoContainer2{
+
+.logoContainer2 {
   height: 40px;
   width: 40px;
   background-color: gray;
@@ -273,26 +299,30 @@ text-align: center;
   justify-content: center;
   text-align: center;
   border-radius: 50%;
-  fill:aliceblue;
+  fill: aliceblue;
   margin-left: 12px;
 }
-.logoMat{
+
+.logoMat {
   margin-left: 7px;
 }
-.ContainingPost{
+
+.ContainingPost {
   display: flex;
 }
-.dueDate{
-  color:#5f6368; 
+
+.dueDate {
+  color: #5f6368;
   margin-right: 10px;
 }
-.singlePost{
+
+.singlePost {
   padding-top: 10px;
   display: flex;
   text-align: center;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-  width: 800px; 
-  border-top: solid 1px rgb(0, 0, 0 , 0.1);
+  width: 800px;
+  border-top: solid 1px rgb(0, 0, 0, 0.1);
   cursor: pointer;
   margin-top: 5px;
   flex-grow: 1;
@@ -300,24 +330,26 @@ text-align: center;
   align-items: center;
 
 }
-.singlePost:hover{
+
+.singlePost:hover {
   background-color: gainsboro;
   border-radius: 10px;
 
 }
-.singlePost.active{
+
+.singlePost.active {
   background-color: gainsboro;
-  border-radius:10px 10px 0 0 ;
+  border-radius: 10px 10px 0 0;
 
 }
 
-.assMat{
+.assMat {
   padding-left: 2px;
-  list-style: none; 
+  list-style: none;
 
 }
 
-.title{
+.title {
   font-size: 32px;
   padding-top: 30px;
   padding-left: 15px;
@@ -325,18 +357,19 @@ text-align: center;
   height: 25px;
 }
 
-.catHeadings:hover{
+.catHeadings:hover {
 
-    background-color: gainsboro;
+  background-color: gainsboro;
   border-radius: 15px;
-  
+
 }
 
-.assMat.text{
+.assMat.text {
   margin-top: 13px;
   color: #5f6368;
   margin-left: 15px;
 }
+
 /* CSS for the accordion content */
 .accordion-content {
   overflow: hidden;
@@ -344,7 +377,7 @@ text-align: center;
   padding: 10px;
   background-color: #ffffff;
   border-radius: 0 0 20px 20px;
-  border: solid 1px rgb(0, 0, 0 , 0.1);
+  border: solid 1px rgb(0, 0, 0, 0.1);
   /* Remove the transition property */
 }
 
@@ -354,8 +387,10 @@ text-align: center;
     max-height: 0;
     padding: 0;
   }
+
   100% {
-    max-height: 200px; /* Set the desired height of the content when fully open */
+    max-height: 200px;
+    /* Set the desired height of the content when fully open */
     padding: 10px;
   }
 }
@@ -363,16 +398,18 @@ text-align: center;
 /* Apply the animation to the active accordion content */
 .accordion-content.active {
   display: block;
-  animation: openAccordion 0.5s ease; /* Set the desired duration and easing function */
+  animation: openAccordion 0.5s ease;
+  /* Set the desired duration and easing function */
   height: 200px;
 }
-.innerAccordion {
-display: flex;
-text-align: center;
-margin-left: 20px;
-margin-top: 20px;
 
-box-shadow: 10px;
+.innerAccordion {
+  display: flex;
+  text-align: center;
+  margin-left: 20px;
+  margin-top: 20px;
+
+  box-shadow: 10px;
 }
 
 .link-div {
@@ -382,14 +419,14 @@ box-shadow: 10px;
 
 /* Media query for medium screens */
 @media (max-width: 1700px) {
-  .aside{
+  .aside {
     margin-left: 200px;
   }
 }
 
-.footer{
-  border-top:solid 1px rgb(0, 0, 0 , 0.1) ;
-  margin-top:60px;
+.footer {
+  border-top: solid 1px rgb(0, 0, 0, 0.1);
+  margin-top: 60px;
   padding-top: 10px;
   padding-left: 16px;
 }
