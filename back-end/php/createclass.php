@@ -22,6 +22,7 @@ if ($query->execute()) {
     $response['status'] = 'success';
 } else {
     $response['status'] = 'error';
+   
     $response['error_message'] = $mysqli->error; 
 }
 
