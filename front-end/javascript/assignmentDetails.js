@@ -1,7 +1,23 @@
+const landingPage = document.getElementById('landingPage');
+landingPage.addEventListener("click",gotToPage);
+
+function gotToPage(event){
+  const id  =window.location.search.split('=')[1]
+  window.location.href= `/front-end/html/${event.target.className}.html?id=${id}`;
+}
+
 let btnClicked = false;
 let showModal = false;
+let btnMenu =false;
 
 document.addEventListener('DOMContentLoaded',async function(){
+  const menu_btn= document.getElementById("hamburger");
+  menu_btn.addEventListener("click", function(){
+    btnMenu = !btnMenu;
+    showMenu();
+    console.log(btnMenu);
+  });
+
   const uploadbtn= document.getElementById("uploadbtn");
   uploadbtn.addEventListener("click", function(){
     btnClicked = !btnClicked;
@@ -52,4 +68,14 @@ function hideModal(){
   showModal == false
   const module=document.getElementById("upload_files_popup");
     module.style.display = "none";
+}
+
+function showMenu(){
+  if (btnMenu == true){
+    const menu_module=document.getElementById("menu");
+    menu_module.style.display = "block";
+  }else{
+    const menu_module=document.getElementById("menu");
+    menu_module.style.display = "none";
+  }
 }
