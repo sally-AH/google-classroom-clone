@@ -12,9 +12,14 @@
 
 <p align="center">
   <img src="readme_imgs/signup_page.PNG" alt="signup_page" width="100%">
-  <img src="" alt="Game Screen 1" width="100%">
-  <img src="" alt="Full Screen 1" width="100%">
-  <img src="" alt="Full Screen 1" width="100%">
+  <img src="readme_imgs/assignment_page.PNG" alt="assignment_page" width="100%">
+  <img src="readme_imgs/classes_page.PNG" alt="classes_page" width="100%">
+  <img src="readme_imgs/create_assignment_page.PNG" alt="create_assignment_page" width="100%">
+  <img src="readme_imgs/edit_profile_page.PNG" alt="edit_profile_page" width="100%">
+  <img src="readme_imgs/forget_password_page.PNG" alt="forget_password_page" width="100%">
+  <img src="readme_imgs/people_page.PNG" alt="people_page" width="100%">
+  <img src="readme_imgs/stream_page.PNG" alt="stream_page" width="100%">
+  
 </p>
 
 ## Contact Information
