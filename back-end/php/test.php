@@ -1,25 +1,34 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $uploadDirectory = "path/to/your/upload/directory/";
 
-    // Check if there was an error during upload
-    if ($_FILES["file"]["error"] > 0) {
-        echo "Error: " . $_FILES["file"]["error"];
-    } else {
-        $fileType = $_FILES["file"]["type"];
-        $fileTempName = $_FILES["file"]["tmp_name"];
-        $fileExtension = pathinfo($_FILES["file"]["name"], PATHINFO_EXTENSION);
-        
-        // Generate a unique filename to avoid overwriting existing files
-        $newFileName = uniqid() . "." . $fileExtension;
-        
-        // Move the uploaded file to the desired directory
-        if (move_uploaded_file($fileTempName, $uploadDirectory . $newFileName)) {
-            echo "File uploaded successfully.";
-            // Here, you can save the file name or its path in your database if needed.
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type, Access-Control-Allow-Methods, Access-Control-Allow-Origin");
+
+// Check if the request is a POST request and if a file was uploaded successfully
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["uploadedFile"])) {
+    // File details
+    $file_name = $_FILES["uploadedFile"]["name"];
+    $file_type = $_FILES["uploadedFile"]["type"];
+    $file_size = $_FILES["uploadedFile"]["size"];
+    $file_tmp = $_FILES["uploadedFile"]["tmp_name"];
+    $file_error = $_FILES["uploadedFile"]["error"];
+
+    
+    // Define the target directory to save the uploaded file
+    $target_dir = "../images/";
+
+    // Check for any errors during file upload
+    if ($file_error === UPLOAD_ERR_OK) {
+        // Move the uploaded file to the target directory
+        if (move_uploaded_file($file_tmp, $target_dir . $file_name)) {
+            echo json_encode("File uploaded successfully.");
         } else {
-            echo "Error uploading file.";
+            echo json_encode("Error uploading the file.");
         }
+    } else {
+        echo "Error during file upload. Error code: " . $file_error;
     }
+} else {
+    echo "Invalid request.";
 }
 ?>

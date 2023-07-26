@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/front-end/images/ic_product_classroom_144.png" sizes="144x144">
+  <link rel="stylesheet" href="/front-end/styling/people.css">
+  <title>People</title>
+</head>
+
+<body>
+  <div class="page_container">
+    <nav class="navbar">
+      <div class="navContent">
+        <div class="navContainer">
+          <div class="nav-left">
+            <div class="navLogo">
+              <span>
+                <button class="hamburger">
+                  <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                  </svg>
+                </button>
+              </span>
+              <h1 class="headerTitle">
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="stream_router">
+          <div class="link stream">
+            <a>Stream</a>
+          </div>
+          <div class="link classwork">
+            <a>Classwork</a>
+          </div>
+          <div class="link people">
+            <a>People</a>
+          </div>
+        </div>
+        <div class="right_side">
+          <div>
+            <a aria-label="Google apps" href="https://www.google.com.lb/intl/en/about/products" aria-expanded="false"
+              role="button" tabindex="0">
+              <svg class="squareIcon" focusable="false" viewBox="0 0 24 24">
+                <path
+                  d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
+                </path>
+              </svg>
+            </a>
+          </div>
+          <a aria-label=""
+            href="https://accounts.google.com/SignOutOptions?hl=en&amp;continue=https://classroom.google.com/u/1/h%3Fpli%3D1&amp;ec=GBRAiQI"
+            role="button" tabindex="0" aria-expanded="false">
+            <img class="icon" src="https://lh3.google.com/u/1/ogw/AGvuzYa5BT2c0XWMzS0ASl1PdkxN_GtY3vPv03DCwHFe=s32-c-mo"
+              srcset="https://lh3.google.com/u/1/ogw/AGvuzYa5BT2c0XWMzS0ASl1PdkxN_GtY3vPv03DCwHFe=s32-c-mo 1x, https://lh3.google.com/u/1/ogw/AGvuzYa5BT2c0XWMzS0ASl1PdkxN_GtY3vPv03DCwHFe=s64-c-mo 2x "></a>
+        </div>
+      </div>
+    </nav>
+    <div class="body_container">
+      <div class="wrapper">
+        <div class="section_container">
+          <div class="title">
+            <h1>Teachers</h1>
+            <div class="add">
+              <span>
+                <button id="addTeacher" class="addSymbol">
+                  <span>
+                    <svg focusable="false" width="30" height="30" viewBox="0 0 24 24">
+                      <path d="M20 13h-7v7h-2v-7H4v-2h7V4h2v7h7v2z"></path>
+                    </svg>
+                  </span>
+                </button>
+              </span>
+            </div>
+
+
+            <div id="add_teacher_pop" class="create_class_popup">
+              <div class="class_popup_container">
+                <div class="container_title">Invite teachers</div>
+                <input type="text" placeholder="Type a name or email address id" id="studentemail">
+                <div class="test"></div>
+                <div class="container_footer">
+                  <div id="cancel_tech" class="footer_btn">Cancel</div>
+                  <div id="invite_tech" class="footer_btn studentbtn">Invite</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="upper_part">
+          </div>
+        </div>
+        <div class="section_container c2">
+          <div class="title">
+            <h1>Classmates</h1>
+            <div>
+              <span>
+                <button id="addStudent" class="addSymbol">
+                  <span>
+                    <svg focusable="false" width="30" height="30" viewBox="0 0 24 24">
+                      <path d="M20 13h-7v7h-2v-7H4v-2h7V4h2v7h7v2z"></path>
+                    </svg>
+                  </span>
+                </button>
+              </span>
+            </div>
+
+
+            <div id="add_student_pop" class="create_class_popup">
+              <div class="class_popup_container">
+                <div class="container_title">Invite students</div>
+                <input type="text" placeholder="Type a name or email address" id="studentemail">
+                <div class="test"></div>
+                <div class="container_footer">
+                  <div id="cancel_std" class="footer_btn">Cancel</div>
+                  <div id="invite_std" class="footer_btn teacherbtn">Invite</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="down_part">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/front-end/javascript/people.js"></script>
+    <scrtipt src="../javascript/classroom_student_teacher.js"></scrtipt>
+
+  </div>
+</body>
+
+</html>

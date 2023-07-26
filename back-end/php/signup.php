@@ -29,4 +29,5 @@ if ($email_exists == 0) {
     $response['message'] = "another message in fail";
 }
 
+
 echo json_encode($response);
