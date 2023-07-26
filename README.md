@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img src="" alt="Game Screen 1" width="100%">
+  <img src="readme_imgs/signup_page.PNG" alt="signup_page" width="100%">
   <img src="" alt="Game Screen 1" width="100%">
   <img src="" alt="Full Screen 1" width="100%">
   <img src="" alt="Full Screen 1" width="100%">
