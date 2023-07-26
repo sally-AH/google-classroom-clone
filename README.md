@@ -66,12 +66,12 @@ If you have any questions or suggestions, feel free to reach out to me:
 
 </br>
 
-#team member 4: Charbel Allawi
+#team member 4: Tony Tannoury
 
 </br>
 
-📧 Email: [charbelallawi0@gmail.com](mailto:charbelallawi0@gmail.com)
+📧 Email: [tatannoury01@gmail.com](mailto:tatannoury01@gmail.com)
 💼 LinkedIn: [Charbel Allawi](https://www.linkedin.com/in/charbelallawi/)
-📱 Phone number: [+96176968647](https://api.whatsapp.com/send?phone=96176968647)
+📱 Phone number: [+96181174308](https://api.whatsapp.com/send?phone=96181174308)
 
 </br>
