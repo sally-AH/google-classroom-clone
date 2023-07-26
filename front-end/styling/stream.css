@@ -396,12 +396,17 @@ html, body {
     align-items: center;
     justify-content: flex-start;
     padding: 0 0 0 20px;
-    background-color: #E3EEFC;
     border-radius: 0 32px 32px 0;
+    cursor: pointer;
   }
 
+  /* .classes_router{
+    background-color: #E3EEFC;
+    border:1px solid #aecef8;
+  } */
+
   .routers:hover{
-    background-color: #f5f5f5;
+    background-color: #E3EEFC;
   }
 
   .burger_navbar_bottom_body{
@@ -410,7 +415,6 @@ html, body {
     padding: 15px 0 0 0;
     display: flex;
     flex-direction: column;
-    /* row-gap: 1rem; */
     border-bottom: 1px solid #E9EAEB;
   }
 
