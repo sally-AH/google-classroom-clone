@@ -448,3 +448,7 @@ html, body {
     fill: #5f6368;
   }
   
+  .burger_navbar_footer{
+    width: 100%;
+    padding: 10px 0;
+  }
