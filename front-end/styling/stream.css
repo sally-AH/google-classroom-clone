@@ -18,7 +18,7 @@ html, body {
     top: 0;
     transform: none;
     width: 100%;
-    z-index: 986; 
+    z-index: 1; 
   }
   
   .navContent {
@@ -368,5 +368,83 @@ html, body {
     width: 20px;
     height: 20px;
     cursor: pointer;
+  }
+  
+  .burger_navbar{
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    padding: 6px 0;
+    z-index: 4;
+  }
+
+  .burger_navbar_top_header{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #E9EAEB;
+  }
+
+  .routers{
+    width: 95%;
+    height: 56px;
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 0 0 20px;
+    background-color: #E3EEFC;
+    border-radius: 0 32px 32px 0;
+  }
+
+  .routers:hover{
+    background-color: #f5f5f5;
+  }
+
+  .burger_navbar_bottom_body{
+    width: 100%;
+    height: 240px;
+    padding: 15px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    /* row-gap: 1rem; */
+    border-bottom: 1px solid #E9EAEB;
+  }
+
+  .todo_item{
+    width: 95%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    padding: 15px 0 15px 20px;
+    border-radius: 0 32px 32px 0;
+    cursor: pointer;
+  }
+
+  .todo_item img{
+    width: 24px;
+    height: 24px;
+  }
+
+  .todo_item:hover{
+    background-color: #f5f5f5;
+  }
+
+  .body_title{
+    width: 100%;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 0 15px 20px;
+  }
+
+  .NMm5M  {
+    color: #5f6368;
+    fill: #5f6368;
   }
   
