@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 const search = window.location.search
 let id = search.split('=')[1]
 
 document.querySelector(".headerTitle").innerHTML = `${localStorage.getItem("className")} <br>
 <span class="classroomText">
   ${localStorage.getItem("classDescription")}</span>`
+=======
+
+const id = 1;
+>>>>>>> 847bf3a6dbe84e2292b7077d8bdb44161966a5f6
 const teacherUsers = [];
 const studentUsers = [];
 
@@ -13,10 +18,17 @@ const module1=document.getElementById("add_teacher_pop");
 const module2=document.getElementById("add_student_pop");
 document.addEventListener('DOMContentLoaded',function(){
 document.querySelector(".stream").addEventListener("click", ()=>{
+<<<<<<< HEAD
   window.location.href=`stream.html?id=${id}`
 })
 document.querySelector(".classwork").addEventListener("click", ()=>{
   window.location.href=`classwork.html?id=${id}`
+=======
+  window.location.href='stream.html'
+})
+document.querySelector(".classwork").addEventListener("click", ()=>{
+  window.location.href='classwork.html'
+>>>>>>> 847bf3a6dbe84e2292b7077d8bdb44161966a5f6
 })
 
   const invite_btn_teacher = document.getElementById("addTeacher");
@@ -34,6 +46,10 @@ document.querySelector(".classwork").addEventListener("click", ()=>{
 
   const inv_tech = document.getElementById("invite_tech");
   inv_tech.addEventListener("click",function(){
+<<<<<<< HEAD
+=======
+    // add your method
+>>>>>>> 847bf3a6dbe84e2292b7077d8bdb44161966a5f6
   });
 
   const invite_btn_student = document.getElementById("addStudent");
@@ -50,6 +66,10 @@ document.querySelector(".classwork").addEventListener("click", ()=>{
 
   const invite_std = document.getElementById("invite_std");
   invite_std.addEventListener("click",function(){
+<<<<<<< HEAD
+=======
+    // add your method
+>>>>>>> 847bf3a6dbe84e2292b7077d8bdb44161966a5f6
   });
 
 })
@@ -71,12 +91,19 @@ function checkModalToggle2(){
 
 
 async function get() {
+<<<<<<< HEAD
   const search = window.location.search
   let id = search.split('=')[1]
   try {
     const response = await fetch("http://localhost/google-classroom-clone/back-end/php/people.php?id", {
       method: "POST",
       body: JSON.stringify({ class_id: id }) 
+=======
+  try {
+    const response = await fetch("http://localhost/google-classroom-clone/back-end/php/people.php?id", {
+      method: "POST",
+      body: JSON.stringify({ class_id: 1 }) 
+>>>>>>> 847bf3a6dbe84e2292b7077d8bdb44161966a5f6
     });
     const { data } = await response.json(); 
     console.log(data)
