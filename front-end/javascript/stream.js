@@ -1,8 +1,10 @@
 const stream_route = document.getElementById("stream_route");
 const classwork_route = document.getElementById('classwork_route');
 const people_route = document.getElementById('people_route');
+const landingPage = document.getElementById('landingPage');
 classwork_route.addEventListener("click",gotToPage);
 people_route.addEventListener("click",gotToPage);
+landingPage.addEventListener("click",gotToPage);
 
 
 const line = document.getElementById("line_people");
@@ -17,10 +19,25 @@ function gotToPage(event){
 
 
 /////////////////////////////////////////////
-
+let btnClicked = false;
 
 document.addEventListener("DOMContentLoaded", async function (){
+  const menu_btn= document.getElementById("hamburger");
+  menu_btn.addEventListener("click", function(){
+    btnClicked = !btnClicked;
+    checkToggle();
+    console.log(btnClicked);
+  });
 
+  function checkToggle(){
+  if (btnClicked == true){
+    const popup_module=document.getElementById("menu");
+    popup_module.style.display = "block";
+  }else{
+    const popup_module=document.getElementById("menu");
+    popup_module.style.display = "none";
+  }
+}
 
     const body = {user_id : 2}
     const parsebody = JSON.stringify(body);
