@@ -1,6 +1,32 @@
+const landingPage = document.getElementById('landingPage');
+landingPage.addEventListener("click",gotToPage);
+
+function gotToPage(event){
+  const id  =window.location.search.split('=')[1]
+  window.location.href= `/front-end/html/${event.target.className}.html?id=${id}`;
+}
+
+let btnClicked = false;
 const categories = []
 
 document.addEventListener("DOMContentLoaded", async() => {
+  const menu_btn= document.getElementById("hamburger");
+  menu_btn.addEventListener("click", function(){
+    btnClicked = !btnClicked;
+    checkToggle();
+    console.log(btnClicked);
+  });
+
+  function checkToggle(){
+  if (btnClicked == true){
+    const popup_module=document.getElementById("menu");
+    popup_module.style.display = "block";
+  }else{
+    const popup_module=document.getElementById("menu");
+    popup_module.style.display = "none";
+  }
+}
+
   const id = window.location.search.split('=')[1]
   const url = "http://localhost/google-classroom-clone/back-end/php/getAssignments.php"
   const body = {
