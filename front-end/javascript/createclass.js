@@ -1,8 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+<<<<<<< HEAD
+=======
   const search = window.location.search
   let useridd = localStorage.getItem("user_id")
   let userids = JSON.parse(useridd)
   let userid = parseInt(userids)
+>>>>>>> 847bf3a6dbe84e2292b7077d8bdb44161966a5f6
 
   function linkgenerator() {
     var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -49,12 +52,21 @@ document.addEventListener("DOMContentLoaded", function () {
       class_link: classlink,
       class_code: classcode
     }
+<<<<<<< HEAD
+    const jsonobject = JSON.stringify(jsdata)
+    const default_url = "http://localhost/google-classroom-clone/back-end/php/createclass.php"
+
+    async function createclass() {
+
+      const response = await fetch(default_url, {
+=======
     let jsonobject = JSON.stringify(jsdata)
     let default_url = "http://localhost/google-classroom-clone/back-end/php/createclass.php"
 
     async function createclass() {
 
       let response = await fetch(default_url, {
+>>>>>>> 847bf3a6dbe84e2292b7077d8bdb44161966a5f6
         method: "POST",
         body: jsonobject,
 
@@ -63,6 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     var res = await createclass()
     var jsn = await res.json()
+<<<<<<< HEAD
+    console.log(jsn)
+  })
+
+=======
 
     async function getclassid() {
       jsdata = {
@@ -103,4 +120,5 @@ document.addEventListener("DOMContentLoaded", function () {
     var jsonresult = await res44.json()
     console.log(jsonresult)
   })
+>>>>>>> 847bf3a6dbe84e2292b7077d8bdb44161966a5f6
 })

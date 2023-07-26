@@ -1,3 +1,6 @@
+// const search = window.location.search
+
+// console.log(search.split('=')[1])
 const stream_route = document.getElementById("stream_route");
 const classwork_route = document.getElementById('classwork_route');
 const people_route = document.getElementById('people_route');
@@ -16,6 +19,8 @@ function gotToPage(event){
   const id  =window.location.search.split('=')[1]
   window.location.href= `/front-end/html/${event.target.className}.html?id=${id}`;
 }
+
+/////////////////////////////////////////////
 
 
 /////////////////////////////////////////////

@@ -27,10 +27,12 @@ document.addEventListener("DOMContentLoaded", async() => {
   }
 }
 
+  const title = document.querySelector(".title").textContent = localStorage.getItem('className')
+  const description = document.querySelector(".description").textContent = localStorage.getItem('classDescription')
   const id = window.location.search.split('=')[1]
   const url = "http://localhost/google-classroom-clone/back-end/php/getAssignments.php"
   const body = {
-    id:1
+    id:id
   }
   const parsedBody = JSON.stringify(body)
   const response = await fetch(url , {
@@ -40,6 +42,22 @@ document.addEventListener("DOMContentLoaded", async() => {
   const data = await response.json()
   posts = data
   console.log(data)
+  const rolebody = {
+    class_id:id,
+    user_id:localStorage.getItem("user_id")
+}
+const parsedRolebBody = JSON.stringify(rolebody)
+  const userRole = await fetch("http://localhost/google-classroom-clone/back-end/php/getRole.php" , {
+    method:"POST",
+    body:parsedRolebBody
+  })
+  const roleResponse = await userRole.json()
+  console.log(roleResponse)
+  const createButton = document.querySelector(".createButton")
+  createButton.style = roleResponse.user_role_id === 1 ? "display: " : "display:none"
+  createButton.addEventListener("click" , ()=>{
+    window.location.href = `./createAssignment.html?id=${id}`
+  })
   const ulElement = document.querySelector('.aside ul');
   const categories = [];
   const streamButton = document.querySelector(".stream").addEventListener('click' , ()=>{

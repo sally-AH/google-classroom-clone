@@ -20,8 +20,12 @@ function gotToPage(event){
 
 
 
+const search = window.location.search
+let id = search.split('=')[1]
 
-const id = 1;
+document.querySelector(".headerTitle").innerHTML = `${localStorage.getItem("className")} <br>
+<span class="classroomText">
+  ${localStorage.getItem("classDescription")}</span>`
 const teacherUsers = [];
 const studentUsers = [];
 
@@ -34,10 +38,10 @@ const module2=document.getElementById("add_student_pop");
 
 document.addEventListener('DOMContentLoaded',function(){
 document.querySelector(".stream").addEventListener("click", ()=>{
-  window.location.href='stream.html'
+  window.location.href=`stream.html?id=${id}`
 })
 document.querySelector(".classwork").addEventListener("click", ()=>{
-  window.location.href='classwork.html'
+  window.location.href=`classwork.html?id=${id}`
 })
 
 const menu_btn= document.getElementById("hamburger");
@@ -63,7 +67,6 @@ const menu_btn= document.getElementById("hamburger");
 
   const inv_tech = document.getElementById("invite_tech");
   inv_tech.addEventListener("click",function(){
-    // add your method
   });
 
   const invite_btn_student = document.getElementById("addStudent");
@@ -80,7 +83,6 @@ const menu_btn= document.getElementById("hamburger");
 
   const invite_std = document.getElementById("invite_std");
   invite_std.addEventListener("click",function(){
-    // add your method
   });
 
 })
@@ -112,10 +114,12 @@ function showMenu(){
 
 
 async function get() {
+  const search = window.location.search
+  let id = search.split('=')[1]
   try {
     const response = await fetch("http://localhost/google-classroom-clone/back-end/php/people.php?id", {
       method: "POST",
-      body: JSON.stringify({ class_id: 1 }) 
+      body: JSON.stringify({ class_id: id }) 
     });
     const { data } = await response.json(); 
     console.log(data)
