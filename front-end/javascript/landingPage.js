@@ -1,5 +1,4 @@
-const landingPage = document.getElementById('landingPage');
-landingPage.addEventListener("click",gotToPage);
+
 
 function gotToPage(event){
   const id  =window.location.search.split('=')[1]

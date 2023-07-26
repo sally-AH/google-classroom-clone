@@ -5,13 +5,13 @@ const landingPage = document.getElementById('landingPage');
 stream_route.addEventListener("click", gotToPage);
 classwork_route.addEventListener("click",gotToPage);
 // people_route.addEventListener("click",gotToPage);
-landingPage.addEventListener("click",gotToPage);
+// landingPage.addEventListener("click",gotToPage);
 
 
 const line = document.getElementById("line_stream");
 const line1 = document.getElementById("line_classwork");
-    line.style.display  = 'none';
-    line1.style.display = 'none';
+    // line.style.display  = 'none';
+    // line1.style.display = 'none';
 
 function gotToPage(event){
   const id  =window.location.search.split('=')[1]
@@ -23,7 +23,7 @@ function gotToPage(event){
 const search = window.location.search
 let id = search.split('=')[1]
 
-document.querySelector(".headerTitle").innerHTML = `${localStorage.getItem("className")} <br>
+document.querySelector(".class_room_title").innerHTML = `${localStorage.getItem("className")} <br>
 <span class="classroomText">
   ${localStorage.getItem("classDescription")}</span>`
 const teacherUsers = [];
