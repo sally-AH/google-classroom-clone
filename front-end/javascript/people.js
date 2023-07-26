@@ -1,3 +1,25 @@
+const stream_route = document.getElementById("stream_route");
+const classwork_route = document.getElementById('classwork_route');
+// const people_route = document.getElementById('people_route');
+const landingPage = document.getElementById('landingPage');
+stream_route.addEventListener("click", gotToPage);
+classwork_route.addEventListener("click",gotToPage);
+// people_route.addEventListener("click",gotToPage);
+landingPage.addEventListener("click",gotToPage);
+
+
+const line = document.getElementById("line_stream");
+const line1 = document.getElementById("line_classwork");
+    line.style.display  = 'none';
+    line1.style.display = 'none';
+
+function gotToPage(event){
+  const id  =window.location.search.split('=')[1]
+  window.location.href= `/front-end/html/${event.target.className}.html?id=${id}`;
+}
+
+
+
 
 const id = 1;
 const teacherUsers = [];
@@ -5,8 +27,11 @@ const studentUsers = [];
 
 let btnClicked = false;
 let showModal = false;
+let btnMenu = false;
+
 const module1=document.getElementById("add_teacher_pop");
 const module2=document.getElementById("add_student_pop");
+
 document.addEventListener('DOMContentLoaded',function(){
 document.querySelector(".stream").addEventListener("click", ()=>{
   window.location.href='stream.html'
@@ -14,6 +39,14 @@ document.querySelector(".stream").addEventListener("click", ()=>{
 document.querySelector(".classwork").addEventListener("click", ()=>{
   window.location.href='classwork.html'
 })
+
+const menu_btn= document.getElementById("hamburger");
+  menu_btn.addEventListener("click", function(){
+    btnMenu = !btnMenu;
+    showMenu();
+    console.log(btnMenu);
+  });
+
 
   const invite_btn_teacher = document.getElementById("addTeacher");
   invite_btn_teacher.addEventListener("click",function(){
@@ -64,6 +97,16 @@ function checkModalToggle2(){
     module2.style.display = "flex";
   }else{
     module2.style.display = "none";
+  }
+}
+
+function showMenu(){
+  if (btnMenu == true){
+    const menu_module=document.getElementById("menu");
+    menu_module.style.display = "block";
+  }else{
+    const menu_module=document.getElementById("menu");
+    menu_module.style.display = "none";
   }
 }
 
